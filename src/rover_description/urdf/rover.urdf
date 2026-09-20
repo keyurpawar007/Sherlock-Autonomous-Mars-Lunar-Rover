@@ -1,0 +1,1856 @@
+<?xml version='1.0'?>
+<robot name="rover">
+  
+  
+  <link name="base_footprint"/>
+<joint name="base_footprint_joint" type="fixed">
+  <parent link="base_footprint"/>
+  <child link="base_link"/>
+  <origin xyz="0 0 0" rpy="0 0 0"/>
+</joint>
+
+
+  <link name="base_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.1" />
+      <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001" />
+    </inertial>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.6 0.5 0.15"/>
+      </geometry>
+    </collision>
+  </link>
+
+  
+  
+  <link name="lidar_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.072"/>
+      <inertia ixx="0.0001" ixy="0" ixz="0"
+               iyy="0.0001" iyz="0"
+               izz="0.0001"/>
+    </inertial>
+
+    
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.090 0.025 0.025"/>
+      </geometry>
+      <material name="d435i_material">
+        <color rgba="0.08 0.08 0.08 1"/>
+      </material>
+    </visual>
+
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.090 0.025 0.025"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="lidar_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="lidar_link"/>
+    <origin xyz="0 -0.32 0.25" rpy="0 0 -1.57079632679"/>
+  </joint>
+
+  
+  <link name="camera_optical_frame"/>
+
+  <joint name="camera_optical_joint" type="fixed">
+    <parent link="lidar_link"/>
+    <child link="camera_optical_frame"/>
+    <origin xyz="0 0 0"
+            rpy="-1.57079632679 0 -1.57079632679"/>
+  </joint>
+
+  <link name="chassis_default_as_machined">
+    <inertial>
+      <origin xyz="0.00254634 -0.0390273 0.124793" rpy="0 0 0" />
+      <mass value="9.40689" />
+      <inertia ixx="0.348795" ixy="-0.00291989" ixz="0.000321416" iyy="0.570717" iyz="-0.0071484" izz="0.80336" />
+    </inertial>
+    
+    <visual>
+      <origin xyz="-0.295141 0.00600214 0.000884857" rpy="1.56556 0 -3.14159" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/chassis_default_as_machined.dae" />
+      </geometry>
+      <material name="chassis_default_as_machined_material">
+        <color rgba="0.792157 0.819608 0.933333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.295141 0.00600214 0.000884857" rpy="1.56556 0 -3.14159" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/chassis_default_as_machined.dae" />
+      </geometry>
+    </collision>
+    
+    <visual>
+      <origin xyz="-0.295141 0.00600214 0.000884857" rpy="1.56556 0 -3.14159" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/chassis_default_as_machined__2.dae" />
+      </geometry>
+      <material name="chassis_default_as_machined_2_material">
+        <color rgba="0.792157 0.819608 0.933333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.295141 0.00600214 0.000884857" rpy="1.56556 0 -3.14159" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/chassis_default_as_machined__2.dae" />
+      </geometry>
+    </collision>
+    
+    <visual>
+      <origin xyz="0.319859 0.00542608 0.110883" rpy="3.14159 -0.00523698 1.5708" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/attachment_wheel_to_chassis.dae" />
+      </geometry>
+      <material name="attachment_wheel_to_chassis_material">
+        <color rgba="0.792157 0.819608 0.933333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.319859 0.00542608 0.110883" rpy="3.14159 -0.00523698 1.5708" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/attachment_wheel_to_chassis.dae" />
+      </geometry>
+    </collision>
+    
+    <visual>
+      <origin xyz="-0.295141 0.00600214 0.000884857" rpy="1.56556 0 -3.14159" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/chassis_default_as_machined__3.dae" />
+      </geometry>
+      <material name="chassis_default_as_machined_3_material">
+        <color rgba="0.792157 0.819608 0.933333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.295141 0.00600214 0.000884857" rpy="1.56556 0 -3.14159" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/chassis_default_as_machined__3.dae" />
+      </geometry>
+    </collision>
+    
+    <visual>
+      <origin xyz="-0.295141 0.00600214 0.000884857" rpy="1.56556 0 -3.14159" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/chassis_default_as_machined__4.dae" />
+      </geometry>
+      <material name="chassis_default_as_machined_4_material">
+        <color rgba="0.792157 0.819608 0.933333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.295141 0.00600214 0.000884857" rpy="1.56556 0 -3.14159" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/chassis_default_as_machined__4.dae" />
+      </geometry>
+    </collision>
+    
+    <visual>
+      <origin xyz="0.00485912 -0.306041 0.199253" rpy="1.5708 0.00523698 -1.5708" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/bearing_id_12_od_18.dae" />
+      </geometry>
+      <material name="bearing_id_12_od_18_material">
+        <color rgba="0.792157 0.819608 0.933333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.00485912 -0.306041 0.199253" rpy="1.5708 0.00523698 -1.5708" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/bearing_id_12_od_18.dae" />
+      </geometry>
+    </collision>
+    
+    <visual>
+      <origin xyz="-0.295141 0.00600214 0.000884857" rpy="1.56556 0 -3.14159" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/chassis_default_as_machined__5.dae" />
+      </geometry>
+      <material name="chassis_default_as_machined_5_material">
+        <color rgba="0.792157 0.819608 0.933333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.295141 0.00600214 0.000884857" rpy="1.56556 0 -3.14159" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/chassis_default_as_machined__5.dae" />
+      </geometry>
+    </collision>
+    
+    <visual>
+      <origin xyz="-0.295141 0.00600214 0.000884857" rpy="1.56556 0 -3.14159" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/chassis_default_as_machined__6.dae" />
+      </geometry>
+      <material name="chassis_default_as_machined_6_material">
+        <color rgba="0.792157 0.819608 0.933333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.295141 0.00600214 0.000884857" rpy="1.56556 0 -3.14159" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/chassis_default_as_machined__6.dae" />
+      </geometry>
+    </collision>
+    
+    <visual>
+      <origin xyz="-0.295141 0.00600214 0.000884857" rpy="1.56556 0 -3.14159" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/chassis_default_as_machined__7.dae" />
+      </geometry>
+      <material name="chassis_default_as_machined_7_material">
+        <color rgba="0.792157 0.819608 0.933333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.295141 0.00600214 0.000884857" rpy="1.56556 0 -3.14159" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/chassis_default_as_machined__7.dae" />
+      </geometry>
+    </collision>
+    
+    <visual>
+      <origin xyz="-0.295141 0.00600214 0.000884857" rpy="1.56556 0 -3.14159" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/chassis_default_as_machined__8.dae" />
+      </geometry>
+      <material name="chassis_default_as_machined_8_material">
+        <color rgba="0.792157 0.819608 0.933333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.295141 0.00600214 0.000884857" rpy="1.56556 0 -3.14159" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/chassis_default_as_machined__8.dae" />
+      </geometry>
+    </collision>
+    
+    <visual>
+      <origin xyz="-0.320141 0.00542608 0.110883" rpy="3.14159 -0.00523698 1.5708" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/attachment_wheel_to_chassis.dae" />
+      </geometry>
+      <material name="attachment_wheel_to_chassis_2_material">
+        <color rgba="0.792157 0.819608 0.933333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.320141 0.00542608 0.110883" rpy="3.14159 -0.00523698 1.5708" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/attachment_wheel_to_chassis.dae" />
+      </geometry>
+    </collision>
+    
+    <visual>
+      <origin xyz="-0.295141 0.00600214 0.000884857" rpy="1.56556 0 -3.14159" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/chassis_default_as_machined__9.dae" />
+      </geometry>
+      <material name="chassis_default_as_machined_9_material">
+        <color rgba="0.792157 0.819608 0.933333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.295141 0.00600214 0.000884857" rpy="1.56556 0 -3.14159" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/chassis_default_as_machined__9.dae" />
+      </geometry>
+    </collision>
+    
+    <visual>
+      <origin xyz="-0.295141 0.00600214 0.000884857" rpy="1.56556 0 -3.14159" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/chassis_default_as_machined__10.dae" />
+      </geometry>
+      <material name="chassis_default_as_machined_10_material">
+        <color rgba="0.792157 0.819608 0.933333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.295141 0.00600214 0.000884857" rpy="1.56556 0 -3.14159" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/chassis_default_as_machined__10.dae" />
+      </geometry>
+    </collision>
+    
+    <visual>
+      <origin xyz="-0.295141 0.00600214 0.000884857" rpy="1.56556 0 -3.14159" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/chassis_default_as_machined__11.dae" />
+      </geometry>
+      <material name="chassis_default_as_machined_11_material">
+        <color rgba="0.792157 0.819608 0.933333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.295141 0.00600214 0.000884857" rpy="1.56556 0 -3.14159" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/chassis_default_as_machined__11.dae" />
+      </geometry>
+    </collision>
+    
+    <visual>
+      <origin xyz="-0.295141 0.00600214 0.000884857" rpy="1.56556 0 -3.14159" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/chassis_default_as_machined__12.dae" />
+      </geometry>
+      <material name="chassis_default_as_machined_12_material">
+        <color rgba="0.792157 0.819608 0.933333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.295141 0.00600214 0.000884857" rpy="1.56556 0 -3.14159" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/chassis_default_as_machined__12.dae" />
+      </geometry>
+    </collision>
+    
+    <visual>
+      <origin xyz="-0.295141 0.00600214 0.000884857" rpy="1.56556 0 -3.14159" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/chassis_default_as_machined__13.dae" />
+      </geometry>
+      <material name="chassis_default_as_machined_13_material">
+        <color rgba="0.792157 0.819608 0.933333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.295141 0.00600214 0.000884857" rpy="1.56556 0 -3.14159" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/chassis_default_as_machined__13.dae" />
+      </geometry>
+    </collision>
+    
+    <visual>
+      <origin xyz="-0.295141 0.00600214 0.000884857" rpy="1.56556 0 -3.14159" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/chassis_default_as_machined__14.dae" />
+      </geometry>
+      <material name="chassis_default_as_machined_14_material">
+        <color rgba="0.792157 0.819608 0.933333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.295141 0.00600214 0.000884857" rpy="1.56556 0 -3.14159" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/chassis_default_as_machined__14.dae" />
+      </geometry>
+    </collision>
+    
+    <visual>
+      <origin xyz="-0.295141 0.00600214 0.000884857" rpy="1.56556 0 -3.14159" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/chassis_default_as_machined__15.dae" />
+      </geometry>
+      <material name="chassis_default_as_machined_15_material">
+        <color rgba="0.792157 0.819608 0.933333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.295141 0.00600214 0.000884857" rpy="1.56556 0 -3.14159" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/chassis_default_as_machined__15.dae" />
+      </geometry>
+    </collision>
+    
+    <visual>
+      <origin xyz="-0.295141 0.00600214 0.000884857" rpy="1.56556 0 -3.14159" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/chassis_default_as_machined__16.dae" />
+      </geometry>
+      <material name="chassis_default_as_machined_16_material">
+        <color rgba="0.792157 0.819608 0.933333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.295141 0.00600214 0.000884857" rpy="1.56556 0 -3.14159" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/chassis_default_as_machined__16.dae" />
+      </geometry>
+    </collision>
+    
+    <visual>
+      <origin xyz="-0.295141 0.00600214 0.000884857" rpy="1.56556 0 -3.14159" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/chassis_default_as_machined__17.dae" />
+      </geometry>
+      <material name="chassis_default_as_machined_17_material">
+        <color rgba="0.792157 0.819608 0.933333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.295141 0.00600214 0.000884857" rpy="1.56556 0 -3.14159" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/chassis_default_as_machined__17.dae" />
+      </geometry>
+    </collision>
+    
+    <visual>
+      <origin xyz="0.00485912 -0.280041 0.19939" rpy="1.5708 0.00523698 -1.5708" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/bearing_id_12_od_18.dae" />
+      </geometry>
+      <material name="bearing_id_12_od_18_2_material">
+        <color rgba="0.792157 0.819608 0.933333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.00485912 -0.280041 0.19939" rpy="1.5708 0.00523698 -1.5708" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/bearing_id_12_od_18.dae" />
+      </geometry>
+    </collision>
+    
+    <visual>
+      <origin xyz="-0.295141 0.00600214 0.000884857" rpy="1.56556 0 -3.14159" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/chassis_default_as_machined__18.dae" />
+      </geometry>
+      <material name="chassis_default_as_machined_18_material">
+        <color rgba="0.792157 0.819608 0.933333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.295141 0.00600214 0.000884857" rpy="1.56556 0 -3.14159" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/chassis_default_as_machined__18.dae" />
+      </geometry>
+    </collision>
+    
+    <visual>
+      <origin xyz="-0.295141 0.00600214 0.000884857" rpy="1.56556 0 -3.14159" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/chassis_default_as_machined__19.dae" />
+      </geometry>
+      <material name="chassis_default_as_machined_19_material">
+        <color rgba="0.792157 0.819608 0.933333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.295141 0.00600214 0.000884857" rpy="1.56556 0 -3.14159" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/chassis_default_as_machined__19.dae" />
+      </geometry>
+    </collision>
+    
+    <visual>
+      <origin xyz="-0.295141 0.00600214 0.000884857" rpy="1.56556 0 -3.14159" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/chassis_default_as_machined__20.dae" />
+      </geometry>
+      <material name="chassis_default_as_machined_20_material">
+        <color rgba="0.792157 0.819608 0.933333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.295141 0.00600214 0.000884857" rpy="1.56556 0 -3.14159" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/chassis_default_as_machined__20.dae" />
+      </geometry>
+    </collision>
+    
+    <visual>
+      <origin xyz="-0.295141 0.00600214 0.000884857" rpy="1.56556 0 -3.14159" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/chassis_default_as_machined__21.dae" />
+      </geometry>
+      <material name="chassis_default_as_machined_21_material">
+        <color rgba="0.792157 0.819608 0.933333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.295141 0.00600214 0.000884857" rpy="1.56556 0 -3.14159" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/chassis_default_as_machined__21.dae" />
+      </geometry>
+    </collision>
+    
+    <visual>
+      <origin xyz="-0.295141 0.00600214 0.000884857" rpy="1.56556 0 -3.14159" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/chassis_default_as_machined__22.dae" />
+      </geometry>
+      <material name="chassis_default_as_machined_22_material">
+        <color rgba="0.792157 0.819608 0.933333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.295141 0.00600214 0.000884857" rpy="1.56556 0 -3.14159" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/chassis_default_as_machined__22.dae" />
+      </geometry>
+    </collision>
+    
+    <visual>
+      <origin xyz="0.00485912 -0.145122 0.215096" rpy="1.56556 0 -3.14159" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/robotic_arm_chassis_base_plate.dae" />
+      </geometry>
+      <material name="robotic_arm_chassis_base_plate_material">
+        <color rgba="0.792157 0.819608 0.933333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.00485912 -0.145122 0.215096" rpy="1.56556 0 -3.14159" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/robotic_arm_chassis_base_plate.dae" />
+      </geometry>
+    </collision>
+    
+    <visual>
+      <origin xyz="0.0365094 -0.142782 0.105107" rpy="1.56556 0 -3.14159" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/gear_system_enclosure.dae" />
+      </geometry>
+      <material name="gear_system_enclosure_material">
+        <color rgba="0.792157 0.819608 0.933333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0365094 -0.142782 0.105107" rpy="1.56556 0 -3.14159" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/gear_system_enclosure.dae" />
+      </geometry>
+    </collision>
+    
+    <visual>
+      <origin xyz="-0.295141 0.00600214 0.000884857" rpy="1.56556 0 -3.14159" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/chassis_default_as_machined__23.dae" />
+      </geometry>
+      <material name="chassis_default_as_machined_23_material">
+        <color rgba="0.792157 0.819608 0.933333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.295141 0.00600214 0.000884857" rpy="1.56556 0 -3.14159" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/chassis_default_as_machined__23.dae" />
+      </geometry>
+    </collision>
+    
+    <visual>
+      <origin xyz="-0.295141 0.00600214 0.000884857" rpy="1.56556 0 -3.14159" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/chassis_default_as_machined__24.dae" />
+      </geometry>
+      <material name="chassis_default_as_machined_24_material">
+        <color rgba="0.792157 0.819608 0.933333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.295141 0.00600214 0.000884857" rpy="1.56556 0 -3.14159" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/chassis_default_as_machined__24.dae" />
+      </geometry>
+    </collision>
+    
+    <visual>
+      <origin xyz="-0.295141 0.00600214 0.000884857" rpy="1.56556 0 -3.14159" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/chassis_default_as_machined__25.dae" />
+      </geometry>
+      <material name="chassis_default_as_machined_25_material">
+        <color rgba="0.792157 0.819608 0.933333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.295141 0.00600214 0.000884857" rpy="1.56556 0 -3.14159" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/chassis_default_as_machined__25.dae" />
+      </geometry>
+    </collision>
+    
+    <visual>
+      <origin xyz="-0.295141 0.00600214 0.000884857" rpy="1.56556 0 -3.14159" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/chassis_default_as_machined__26.dae" />
+      </geometry>
+      <material name="chassis_default_as_machined_26_material">
+        <color rgba="0.792157 0.819608 0.933333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.295141 0.00600214 0.000884857" rpy="1.56556 0 -3.14159" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/chassis_default_as_machined__26.dae" />
+      </geometry>
+    </collision>
+  </link>
+  
+  <link name="chassis_to_trapezoid_rod">
+    <inertial>
+      <origin xyz="4.971e-09 0.171668 -0.00300582" rpy="0 0 0" />
+      <mass value="0.4139" />
+      <inertia ixx="0.00559553" ixy="-3.36e-10" ixz="-7e-11" iyy="0.000156772" iyz="-0.000188956" izz="0.00548475" />
+    </inertial>
+    
+    <visual>
+      <origin xyz="-0 0.028 0.01" rpy="-1.5708 -0 -1.63989" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/shaft_10_torsion_mechanism.dae" />
+      </geometry>
+      <material name="shaft_10_torsion_mechanism_material">
+        <color rgba="0.792157 0.819608 0.933333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0 0.028 0.01" rpy="-1.5708 -0 -1.63989" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/shaft_10_torsion_mechanism.dae" />
+      </geometry>
+    </collision>
+    
+    <visual>
+      <origin xyz="0 0.00480229 0.0205" rpy="-3.14159 -0 0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/chassis_to_trapezoid_rod.dae" />
+      </geometry>
+      <material name="chassis_to_trapezoid_rod_material">
+        <color rgba="0.792157 0.819608 0.933333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0.00480229 0.0205" rpy="-3.14159 -0 0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/chassis_to_trapezoid_rod.dae" />
+      </geometry>
+    </collision>
+  </link>
+  
+  <link name="trapezoid_default_as_machined">
+    <inertial>
+      <origin xyz="-0.0286087 0.152357 -0.0236265" rpy="0 0 0" />
+      <mass value="4.8239" />
+      <inertia ixx="0.0221613" ixy="-0.00181547" ixz="-0.00196905" iyy="0.325867" iyz="0.000610313" izz="0.320669" />
+    </inertial>
+    
+    <visual>
+      <origin xyz="-0.268802 0.167162 -0.0934967" rpy="0.988601 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/motor_160kg_cm_ig52.dae" />
+      </geometry>
+      <material name="motor_160kg_cm_ig52_material">
+        <color rgba="0.792157 0.819608 0.933333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.268802 0.167162 -0.0934967" rpy="0.988601 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/motor_160kg_cm_ig52.dae" />
+      </geometry>
+    </collision>
+    
+    <visual>
+      <origin xyz="-0.268802 0.167162 -0.0934967" rpy="0.988601 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/motor_160kg_cm_ig52__2.dae" />
+      </geometry>
+      <material name="motor_160kg_cm_ig52_2_material">
+        <color rgba="0.792157 0.819608 0.933333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.268802 0.167162 -0.0934967" rpy="0.988601 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/motor_160kg_cm_ig52__2.dae" />
+      </geometry>
+    </collision>
+    
+    <visual>
+      <origin xyz="0 0 -0.015" rpy="-1.5708 0 -0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/trapezoid_default_as_machined.dae" />
+      </geometry>
+      <material name="trapezoid_default_as_machined_material">
+        <color rgba="0.792157 0.819608 0.933333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.015" rpy="-1.5708 0 -0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/trapezoid_default_as_machined.dae" />
+      </geometry>
+    </collision>
+    
+    <visual>
+      <origin xyz="-0.268802 0.167162 -0.035221" rpy="-1.55865 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/16_kg_motor_housing.dae" />
+      </geometry>
+      <material name="16_kg_motor_housing_material">
+        <color rgba="0.792157 0.819608 0.933333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.268802 0.167162 -0.035221" rpy="-1.55865 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/16_kg_motor_housing.dae" />
+      </geometry>
+    </collision>
+    
+    <visual>
+      <origin xyz="0.267061 0.166809 -0.0287982" rpy="-1.81629 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/16_kg_motor_housing.dae" />
+      </geometry>
+      <material name="16_kg_motor_housing_2_material">
+        <color rgba="0.792157 0.819608 0.933333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.267061 0.166809 -0.0287982" rpy="-1.81629 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/16_kg_motor_housing.dae" />
+      </geometry>
+    </collision>
+    
+    <visual>
+      <origin xyz="0 0 -0.015" rpy="-1.5708 0 -0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/trapezoid_default_as_machined__2.dae" />
+      </geometry>
+      <material name="trapezoid_default_as_machined_2_material">
+        <color rgba="0.792157 0.819608 0.933333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.015" rpy="-1.5708 0 -0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/trapezoid_default_as_machined__2.dae" />
+      </geometry>
+    </collision>
+    
+    <visual>
+      <origin xyz="0 0 -0.015" rpy="-1.5708 0 -0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/trapezoid_default_as_machined__3.dae" />
+      </geometry>
+      <material name="trapezoid_default_as_machined_3_material">
+        <color rgba="0.792157 0.819608 0.933333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.015" rpy="-1.5708 0 -0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/trapezoid_default_as_machined__3.dae" />
+      </geometry>
+    </collision>
+    
+    <visual>
+      <origin xyz="0.267061 0.166809 -0.0870739" rpy="0.73096 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/motor_160kg_cm_ig52.dae" />
+      </geometry>
+      <material name="motor_160kg_cm_ig52_3_material">
+        <color rgba="0.792157 0.819608 0.933333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.267061 0.166809 -0.0870739" rpy="0.73096 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/motor_160kg_cm_ig52.dae" />
+      </geometry>
+    </collision>
+    
+    <visual>
+      <origin xyz="0 0 -0.015" rpy="-1.5708 0 -0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/trapezoid_default_as_machined__4.dae" />
+      </geometry>
+      <material name="trapezoid_default_as_machined_4_material">
+        <color rgba="0.792157 0.819608 0.933333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.015" rpy="-1.5708 0 -0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/trapezoid_default_as_machined__4.dae" />
+      </geometry>
+    </collision>
+    
+    <visual>
+      <origin xyz="0 0 -0.015" rpy="-1.5708 0 -0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/trapezoid_default_as_machined__5.dae" />
+      </geometry>
+      <material name="trapezoid_default_as_machined_5_material">
+        <color rgba="0.792157 0.819608 0.933333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.015" rpy="-1.5708 0 -0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/trapezoid_default_as_machined__5.dae" />
+      </geometry>
+    </collision>
+    
+    <visual>
+      <origin xyz="0 0 -0.015" rpy="-1.5708 0 -0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/trapezoid_default_as_machined__6.dae" />
+      </geometry>
+      <material name="trapezoid_default_as_machined_6_material">
+        <color rgba="0.792157 0.819608 0.933333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.015" rpy="-1.5708 0 -0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/trapezoid_default_as_machined__6.dae" />
+      </geometry>
+    </collision>
+    
+    <visual>
+      <origin xyz="0 0 -0.015" rpy="-1.5708 0 -0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/trapezoid_default_as_machined__7.dae" />
+      </geometry>
+      <material name="trapezoid_default_as_machined_7_material">
+        <color rgba="0.792157 0.819608 0.933333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.015" rpy="-1.5708 0 -0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/trapezoid_default_as_machined__7.dae" />
+      </geometry>
+    </collision>
+    
+    <visual>
+      <origin xyz="0 0 -0.015" rpy="-1.5708 0 -0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/trapezoid_default_as_machined__8.dae" />
+      </geometry>
+      <material name="trapezoid_default_as_machined_8_material">
+        <color rgba="0.792157 0.819608 0.933333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.015" rpy="-1.5708 0 -0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/trapezoid_default_as_machined__8.dae" />
+      </geometry>
+    </collision>
+    
+    <visual>
+      <origin xyz="-0.534629 -0.00396477 -0.0155233" rpy="1.5708 -0 -3.12945" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/trapezoid_single_eye_default_as_machined.dae" />
+      </geometry>
+      <material name="trapezoid_single_eye_default_as_machined_material">
+        <color rgba="0.792157 0.819608 0.933333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.534629 -0.00396477 -0.0155233" rpy="1.5708 -0 -3.12945" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/trapezoid_single_eye_default_as_machined.dae" />
+      </geometry>
+    </collision>
+    
+    <visual>
+      <origin xyz="0.267061 0.166809 -0.0870739" rpy="0.73096 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/motor_160kg_cm_ig52__2.dae" />
+      </geometry>
+      <material name="motor_160kg_cm_ig52_4_material">
+        <color rgba="0.792157 0.819608 0.933333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.267061 0.166809 -0.0870739" rpy="0.73096 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/motor_160kg_cm_ig52__2.dae" />
+      </geometry>
+    </collision>
+    
+    <visual>
+      <origin xyz="0 0 -0.015" rpy="-1.5708 0 -0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/trapezoid_default_as_machined__9.dae" />
+      </geometry>
+      <material name="trapezoid_default_as_machined_9_material">
+        <color rgba="0.792157 0.819608 0.933333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.015" rpy="-1.5708 0 -0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/trapezoid_default_as_machined__9.dae" />
+      </geometry>
+    </collision>
+  </link>
+  
+  <link name="sheet_metal_motor_tyre_fr">
+    <inertial>
+      <origin xyz="0.00046292 5.49738e-06 0.0266524" rpy="0 0 0" />
+      <mass value="5.26097" />
+      <inertia ixx="0.0324874" ixy="1.7127e-08" ixz="-2.79212e-06" iyy="0.0326651" iyz="-2.11648e-06" izz="0.0517133" />
+    </inertial>
+    
+    <visual><origin xyz="0 0 0" rpy="0 0 0" /><geometry><cylinder radius="0.09" length="0.06" /></geometry><material name="wheel_dark"><color rgba="0.15 0.15 0.15 1" /></material></visual><collision><origin xyz="0 0 0" rpy="0 0 0" /><geometry><sphere radius="0.09" /></geometry></collision></link>
+  
+  <joint name="FR_wheel" type="continuous">
+    <origin xyz="0.267061 0.166809 -0.15409" rpy="-0 -0 -2.41063" />
+    <parent link="trapezoid_default_as_machined" />
+    <child link="sheet_metal_motor_tyre_fr" />
+    <axis xyz="0 0 1" />
+    <limit effort="10" velocity="10" />
+  </joint>
+  
+  <link name="sheet_metal_motor_tyre_fr_2">
+    <inertial>
+      <origin xyz="0.00046292 5.49738e-06 0.0266524" rpy="0 0 0" />
+      <mass value="5.26097" />
+      <inertia ixx="0.0324874" ixy="1.7127e-08" ixz="-2.79212e-06" iyy="0.0326651" iyz="-2.11648e-06" izz="0.0517133" />
+    </inertial>
+    
+    <visual><origin xyz="0 0 0" rpy="0 0 0" /><geometry><cylinder radius="0.09" length="0.06" /></geometry><material name="wheel_dark"><color rgba="0.15 0.15 0.15 1" /></material></visual><collision><origin xyz="0 0 0" rpy="0 0 0" /><geometry><sphere radius="0.09" /></geometry></collision></link>
+  
+  <joint name="MR_wheel" type="continuous">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <parent link="mid_right_mount" />
+    <child link="sheet_metal_motor_tyre_fr_2" />
+    <axis xyz="0 0 1" />
+    <limit effort="10" velocity="10" />
+  </joint>
+  
+  <joint name="FR_Trap" type="revolute">
+    <origin xyz="-0 0.369605 -0.01475" rpy="3.14159 -0 2.22388" />
+    <parent link="chassis_to_trapezoid_rod" />
+    <child link="trapezoid_default_as_machined" />
+    <axis xyz="0 0 1" />
+    <limit effort="10" velocity="10" lower="-2.31398" upper="0.478546" />
+  </joint>
+  
+  <joint name="FR_Rod" type="revolute">
+    <origin xyz="-0.365141 0.00542608 0.110883" rpy="-1.5708 0.864431 1.5708" />
+    <parent link="chassis_default_as_machined" />
+    <child link="chassis_to_trapezoid_rod" />
+    <axis xyz="0 0 1" />
+    <limit effort="10" velocity="10" lower="-0.468242" upper="1.92286" />
+  </joint>
+  
+  <link name="shaft_10_torsion_mechanism">
+    <inertial>
+      <origin xyz="-5e-12 0.185459 0.0176845" rpy="0 0 0" />
+      <mass value="0.386504" />
+      <inertia ixx="0.00462913" ixy="-4.08e-10" ixz="-2.3e-11" iyy="0.000151671" iyz="0.000165482" izz="0.00451162" />
+    </inertial>
+    
+    <visual>
+      <origin xyz="0 0.00480229 0.03525" rpy="3.14159 0 0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/chassis_to_trapezoid_both_side_double_eye.dae" />
+      </geometry>
+      <material name="chassis_to_trapezoid_both_side_double_eye_material">
+        <color rgba="0.792157 0.819608 0.933333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0.00480229 0.03525" rpy="3.14159 0 0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/chassis_to_trapezoid_both_side_double_eye.dae" />
+      </geometry>
+    </collision>
+    
+    <visual>
+      <origin xyz="-0 0.028 -0.00475" rpy="1.5708 0 -0.919596" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/shaft_10_torsion_mechanism.dae" />
+      </geometry>
+      <material name="shaft_10_torsion_mechanism_2_material">
+        <color rgba="0.792157 0.819608 0.933333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0 0.028 -0.00475" rpy="1.5708 0 -0.919596" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/shaft_10_torsion_mechanism.dae" />
+      </geometry>
+    </collision>
+  </link>
+  
+  <link name="trapezoid_single_eye_default_as_machined">
+    <inertial>
+      <origin xyz="0.1495 0.142776 -0.0167891" rpy="0 0 0" />
+      <mass value="2.75976" />
+      <inertia ixx="0.013759" ixy="-0.0125511" ixz="0.00058621" iyy="0.115725" iyz="0.000116192" izz="0.116094" />
+    </inertial>
+    
+    <visual>
+      <origin xyz="0.268274 0.166273 -0.0121952" rpy="-1.87277 1.5708 0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/16_kg_motor_housing__2.dae" />
+      </geometry>
+      <material name="16_kg_motor_housing_3_material">
+        <color rgba="0.792157 0.819608 0.933333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.268274 0.166273 -0.0121952" rpy="-1.87277 1.5708 0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/16_kg_motor_housing__2.dae" />
+      </geometry>
+    </collision>
+    
+    <visual>
+      <origin xyz="0 0 -0.015" rpy="-1.5708 -0 -0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/trapezoid_single_eye_default_as_machined__2.dae" />
+      </geometry>
+      <material name="trapezoid_single_eye_default_as_machined_2_material">
+        <color rgba="0.792157 0.819608 0.933333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.015" rpy="-1.5708 -0 -0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/trapezoid_single_eye_default_as_machined__2.dae" />
+      </geometry>
+    </collision>
+    
+    <visual>
+      <origin xyz="0 0 -0.015" rpy="-1.5708 -0 -0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/trapezoid_single_eye_default_as_machined__3.dae" />
+      </geometry>
+      <material name="trapezoid_single_eye_default_as_machined_3_material">
+        <color rgba="0.792157 0.819608 0.933333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.015" rpy="-1.5708 -0 -0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/trapezoid_single_eye_default_as_machined__3.dae" />
+      </geometry>
+    </collision>
+    
+    <visual>
+      <origin xyz="0 0 -0.015" rpy="-1.5708 -0 -0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/trapezoid_single_eye_default_as_machined__4.dae" />
+      </geometry>
+      <material name="trapezoid_single_eye_default_as_machined_4_material">
+        <color rgba="0.792157 0.819608 0.933333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.015" rpy="-1.5708 -0 -0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/trapezoid_single_eye_default_as_machined__4.dae" />
+      </geometry>
+    </collision>
+    
+    <visual>
+      <origin xyz="0 0 -0.015" rpy="-1.5708 -0 -0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/trapezoid_single_eye_default_as_machined__5.dae" />
+      </geometry>
+      <material name="trapezoid_single_eye_default_as_machined_5_material">
+        <color rgba="0.792157 0.819608 0.933333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.015" rpy="-1.5708 -0 -0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/trapezoid_single_eye_default_as_machined__5.dae" />
+      </geometry>
+    </collision>
+    
+    <visual>
+      <origin xyz="0 0 -0.015" rpy="-1.5708 -0 -0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/trapezoid_single_eye_default_as_machined__6.dae" />
+      </geometry>
+      <material name="trapezoid_single_eye_default_as_machined_6_material">
+        <color rgba="0.792157 0.819608 0.933333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.015" rpy="-1.5708 -0 -0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/trapezoid_single_eye_default_as_machined__6.dae" />
+      </geometry>
+    </collision>
+    
+    <visual>
+      <origin xyz="0 0 -0.015" rpy="-1.5708 -0 -0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/trapezoid_single_eye_default_as_machined__7.dae" />
+      </geometry>
+      <material name="trapezoid_single_eye_default_as_machined_7_material">
+        <color rgba="0.792157 0.819608 0.933333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.015" rpy="-1.5708 -0 -0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/trapezoid_single_eye_default_as_machined__7.dae" />
+      </geometry>
+    </collision>
+    
+    <visual>
+      <origin xyz="0.268274 0.166273 0.0460805" rpy="0.674482 1.5708 0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/motor_160kg_cm_ig52__3.dae" />
+      </geometry>
+      <material name="motor_160kg_cm_ig52_5_material">
+        <color rgba="0.792157 0.819608 0.933333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.268274 0.166273 0.0460805" rpy="0.674482 1.5708 0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/motor_160kg_cm_ig52__3.dae" />
+      </geometry>
+    </collision>
+    
+    <visual>
+      <origin xyz="0.268274 0.166273 0.0460805" rpy="0.674482 1.5708 0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/motor_160kg_cm_ig52__4.dae" />
+      </geometry>
+      <material name="motor_160kg_cm_ig52_6_material">
+        <color rgba="0.792157 0.819608 0.933333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.268274 0.166273 0.0460805" rpy="0.674482 1.5708 0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/motor_160kg_cm_ig52__4.dae" />
+      </geometry>
+    </collision>
+  </link>
+  
+  <link name="sheet_metal_motor_tyre_fr_3">
+    <inertial>
+      <origin xyz="0.00046292 5.49738e-06 0.0266524" rpy="0 0 0" />
+      <mass value="5.26097" />
+      <inertia ixx="0.0324874" ixy="1.7127e-08" ixz="-2.79212e-06" iyy="0.0326651" iyz="-2.11648e-06" izz="0.0517133" />
+    </inertial>
+    
+    <visual><origin xyz="0 0 0" rpy="0 0 0" /><geometry><cylinder radius="0.09" length="0.06" /></geometry><material name="wheel_dark"><color rgba="0.15 0.15 0.15 1" /></material></visual><collision><origin xyz="0 0 0" rpy="0 0 0" /><geometry><sphere radius="0.09" /></geometry></collision></link>
+  
+  <joint name="BR_wheel" type="continuous">
+    <origin xyz="0.268274 0.166273 0.113097" rpy="-3.14159 -0 -0.674482" />
+    <parent link="trapezoid_single_eye_default_as_machined" />
+    <child link="sheet_metal_motor_tyre_fr_3" />
+    <axis xyz="0 0 1" />
+    <limit effort="10" velocity="10" />
+  </joint>
+  
+  <joint name="BR_Trap" type="revolute">
+    <origin xyz="0 0.369605 0" rpy="3.14159 0 2.15666" />
+    <parent link="shaft_10_torsion_mechanism" />
+    <child link="trapezoid_single_eye_default_as_machined" />
+    <axis xyz="0 0 1" />
+    <limit effort="10" velocity="10" lower="-2.38119" upper="0.411332" />
+  </joint>
+  
+  <joint name="BR_Rod" type="revolute">
+    <origin xyz="-0.380381 0.00542608 0.110883" rpy="-1.5708 0.903014 -1.5708" />
+    <parent link="chassis_default_as_machined" />
+    <child link="shaft_10_torsion_mechanism" />
+    <axis xyz="0 0 1" />
+    <limit effort="10" velocity="10" lower="-0.461445" upper="1.80748" />
+  </joint>
+  
+  <link name="shaft_10_torsion_mechanism_2">
+    <inertial>
+      <origin xyz="4.971e-09 0.171668 0.0031878" rpy="0 0 0" />
+      <mass value="0.4139" />
+      <inertia ixx="0.00559507" ixy="-3.36e-10" ixz="-5.7e-11" iyy="0.000156306" iyz="0.000179344" izz="0.00548475" />
+    </inertial>
+    
+    <visual>
+      <origin xyz="0 0.00480229 0.0205" rpy="-3.14159 -0 0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/chassis_to_trapezoid_rod.dae" />
+      </geometry>
+      <material name="chassis_to_trapezoid_rod_2_material">
+        <color rgba="0.792157 0.819608 0.933333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0.00480229 0.0205" rpy="-3.14159 -0 0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/chassis_to_trapezoid_rod.dae" />
+      </geometry>
+    </collision>
+    
+    <visual>
+      <origin xyz="-0 0.028 0.11" rpy="-1.5708 -0 0.883446" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/shaft_10_torsion_mechanism.dae" />
+      </geometry>
+      <material name="shaft_10_torsion_mechanism_3_material">
+        <color rgba="0.792157 0.819608 0.933333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0 0.028 0.11" rpy="-1.5708 -0 0.883446" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/shaft_10_torsion_mechanism.dae" />
+      </geometry>
+    </collision>
+  </link>
+  
+  <link name="trapezoid_default_as_machined_2">
+    <inertial>
+      <origin xyz="-0.0281336 -0.152773 -0.0199851" rpy="0 0 0" />
+      <mass value="4.8239" />
+      <inertia ixx="0.0223086" ixy="0.00216635" ixz="-0.00687986" iyy="0.326009" iyz="-0.000352575" izz="0.320781" />
+    </inertial>
+    
+    <visual>
+      <origin xyz="-0.268147 -0.167439 -0.0346815" rpy="-0.480773 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/16_kg_motor_housing__2.dae" />
+      </geometry>
+      <material name="16_kg_motor_housing_4_material">
+        <color rgba="0.792157 0.819608 0.933333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.268147 -0.167439 -0.0346815" rpy="-0.480773 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/16_kg_motor_housing__2.dae" />
+      </geometry>
+    </collision>
+    
+    <visual>
+      <origin xyz="0 -0 -0.015" rpy="1.5708 -0 0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/trapezoid_default_as_machined__7.dae" />
+      </geometry>
+      <material name="trapezoid_default_as_machined_10_material">
+        <color rgba="0.792157 0.819608 0.933333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 -0 -0.015" rpy="1.5708 -0 0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/trapezoid_default_as_machined__7.dae" />
+      </geometry>
+    </collision>
+    
+    <visual>
+      <origin xyz="0.267653 -0.16763 -0.019018" rpy="-0.480773 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/16_kg_motor_housing__2.dae" />
+      </geometry>
+      <material name="16_kg_motor_housing_5_material">
+        <color rgba="0.792157 0.819608 0.933333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.267653 -0.16763 -0.019018" rpy="-0.480773 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/16_kg_motor_housing__2.dae" />
+      </geometry>
+    </collision>
+    
+    <visual>
+      <origin xyz="0 -0 -0.015" rpy="1.5708 -0 0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/trapezoid_default_as_machined.dae" />
+      </geometry>
+      <material name="trapezoid_default_as_machined_11_material">
+        <color rgba="0.792157 0.819608 0.933333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 -0 -0.015" rpy="1.5708 -0 0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/trapezoid_default_as_machined.dae" />
+      </geometry>
+    </collision>
+    
+    <visual>
+      <origin xyz="0.267653 -0.16763 -0.0777938" rpy="2.66082 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/motor_160kg_cm_ig52__3.dae" />
+      </geometry>
+      <material name="motor_160kg_cm_ig52_7_material">
+        <color rgba="0.792157 0.819608 0.933333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.267653 -0.16763 -0.0777938" rpy="2.66082 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/motor_160kg_cm_ig52__3.dae" />
+      </geometry>
+    </collision>
+    
+    <visual>
+      <origin xyz="-0.428023 0.105303 -0.00998374" rpy="-1.5708 0 2.66082" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/trapezoid_single_eye_default_as_machined.dae" />
+      </geometry>
+      <material name="trapezoid_single_eye_default_as_machined_8_material">
+        <color rgba="0.792157 0.819608 0.933333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.428023 0.105303 -0.00998374" rpy="-1.5708 0 2.66082" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/trapezoid_single_eye_default_as_machined.dae" />
+      </geometry>
+    </collision>
+    
+    <visual>
+      <origin xyz="0 -0 -0.015" rpy="1.5708 -0 0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/trapezoid_default_as_machined__6.dae" />
+      </geometry>
+      <material name="trapezoid_default_as_machined_12_material">
+        <color rgba="0.792157 0.819608 0.933333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 -0 -0.015" rpy="1.5708 -0 0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/trapezoid_default_as_machined__6.dae" />
+      </geometry>
+    </collision>
+    
+    <visual>
+      <origin xyz="0 -0 -0.015" rpy="1.5708 -0 0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/trapezoid_default_as_machined__2.dae" />
+      </geometry>
+      <material name="trapezoid_default_as_machined_13_material">
+        <color rgba="0.792157 0.819608 0.933333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 -0 -0.015" rpy="1.5708 -0 0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/trapezoid_default_as_machined__2.dae" />
+      </geometry>
+    </collision>
+    
+    <visual>
+      <origin xyz="-0.268147 -0.167439 -0.0949572" rpy="2.66082 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/motor_160kg_cm_ig52__4.dae" />
+      </geometry>
+      <material name="motor_160kg_cm_ig52_8_material">
+        <color rgba="0.792157 0.819608 0.933333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.268147 -0.167439 -0.0949572" rpy="2.66082 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/motor_160kg_cm_ig52__4.dae" />
+      </geometry>
+    </collision>
+    
+    <visual>
+      <origin xyz="0.267653 -0.16763 -0.0792938" rpy="2.66082 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/motor_160kg_cm_ig52__4.dae" />
+      </geometry>
+      <material name="motor_160kg_cm_ig52_9_material">
+        <color rgba="0.792157 0.819608 0.933333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.267653 -0.16763 -0.0792938" rpy="2.66082 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/motor_160kg_cm_ig52__4.dae" />
+      </geometry>
+    </collision>
+    
+    <visual>
+      <origin xyz="0 -0 -0.015" rpy="1.5708 -0 0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/trapezoid_default_as_machined__8.dae" />
+      </geometry>
+      <material name="trapezoid_default_as_machined_14_material">
+        <color rgba="0.792157 0.819608 0.933333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 -0 -0.015" rpy="1.5708 -0 0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/trapezoid_default_as_machined__8.dae" />
+      </geometry>
+    </collision>
+    
+    <visual>
+      <origin xyz="0 -0 -0.015" rpy="1.5708 -0 0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/trapezoid_default_as_machined__4.dae" />
+      </geometry>
+      <material name="trapezoid_default_as_machined_15_material">
+        <color rgba="0.792157 0.819608 0.933333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 -0 -0.015" rpy="1.5708 -0 0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/trapezoid_default_as_machined__4.dae" />
+      </geometry>
+    </collision>
+    
+    <visual>
+      <origin xyz="-0.268147 -0.167439 -0.0934572" rpy="2.66082 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/motor_160kg_cm_ig52__3.dae" />
+      </geometry>
+      <material name="motor_160kg_cm_ig52_10_material">
+        <color rgba="0.792157 0.819608 0.933333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.268147 -0.167439 -0.0934572" rpy="2.66082 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/motor_160kg_cm_ig52__3.dae" />
+      </geometry>
+    </collision>
+    
+    <visual>
+      <origin xyz="0 -0 -0.015" rpy="1.5708 -0 0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/trapezoid_default_as_machined__9.dae" />
+      </geometry>
+      <material name="trapezoid_default_as_machined_16_material">
+        <color rgba="0.792157 0.819608 0.933333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 -0 -0.015" rpy="1.5708 -0 0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/trapezoid_default_as_machined__9.dae" />
+      </geometry>
+    </collision>
+    
+    <visual>
+      <origin xyz="0 -0 -0.015" rpy="1.5708 -0 0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/trapezoid_default_as_machined__3.dae" />
+      </geometry>
+      <material name="trapezoid_default_as_machined_17_material">
+        <color rgba="0.792157 0.819608 0.933333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 -0 -0.015" rpy="1.5708 -0 0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/trapezoid_default_as_machined__3.dae" />
+      </geometry>
+    </collision>
+    
+    <visual>
+      <origin xyz="0 -0 -0.015" rpy="1.5708 -0 0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/trapezoid_default_as_machined__5.dae" />
+      </geometry>
+      <material name="trapezoid_default_as_machined_18_material">
+        <color rgba="0.792157 0.819608 0.933333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 -0 -0.015" rpy="1.5708 -0 0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/trapezoid_default_as_machined__5.dae" />
+      </geometry>
+    </collision>
+  </link>
+  
+  <link name="sheet_metal_motor_tyre_fr_4">
+    <inertial>
+      <origin xyz="0.00046292 5.49738e-06 0.0266524" rpy="0 0 0" />
+      <mass value="5.26097" />
+      <inertia ixx="0.0324874" ixy="1.7127e-08" ixz="-2.79212e-06" iyy="0.0326651" iyz="-2.11648e-06" izz="0.0517133" />
+    </inertial>
+    
+    <visual><origin xyz="0 0 0" rpy="0 0 0" /><geometry><cylinder radius="0.09" length="0.06" /></geometry><material name="wheel_dark"><color rgba="0.15 0.15 0.15 1" /></material></visual><collision><origin xyz="0 0 0" rpy="0 0 0" /><geometry><sphere radius="0.09" /></geometry></collision></link>
+  
+  <joint name="FL_wheel" type="continuous">
+    <origin xyz="0.267653 -0.16763 -0.14481" rpy="-0 -0 -0.480773" />
+    <parent link="trapezoid_default_as_machined_2" />
+    <child link="sheet_metal_motor_tyre_fr_4" />
+    <axis xyz="0 0 -1" />
+    <limit effort="10" velocity="10" />
+  </joint>
+  
+  <link name="sheet_metal_motor_tyre_2">
+    <inertial>
+      <origin xyz="0.00046292 5.49738e-06 0.0266524" rpy="0 0 0" />
+      <mass value="5.26097" />
+      <inertia ixx="0.0324874" ixy="1.7127e-08" ixz="-2.79212e-06" iyy="0.0326651" iyz="-2.11648e-06" izz="0.0517133" />
+    </inertial>
+    
+    <visual><origin xyz="0 0 0" rpy="0 0 0" /><geometry><cylinder radius="0.09" length="0.06" /></geometry><material name="wheel_dark"><color rgba="0.15 0.15 0.15 1" /></material></visual><collision><origin xyz="0 0 0" rpy="0 0 0" /><geometry><sphere radius="0.09" /></geometry></collision></link>
+  
+  <joint name="ML_wheel" type="continuous">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <parent link="mid_left_mount" />
+    <child link="sheet_metal_motor_tyre_2" />
+    <axis xyz="0 0 -1" />
+    <limit effort="10" velocity="10" />
+  </joint>
+  
+  <joint name="FL_Trap" type="revolute">
+    <origin xyz="0 0.369605 0.01525" rpy="-0 -0 2.36424" />
+    <parent link="shaft_10_torsion_mechanism_2" />
+    <child link="trapezoid_default_as_machined_2" />
+    <axis xyz="0 0 1" />
+    <limit effort="10" velocity="10" lower="-0.618907" upper="2.17362" />
+  </joint>
+  
+  <joint name="FL_Rod" type="revolute">
+    <origin xyz="0.364859 0.00542608 0.110883" rpy="-1.5708 0.693807 1.5708" />
+    <parent link="chassis_default_as_machined" />
+    <child link="shaft_10_torsion_mechanism_2" />
+    <axis xyz="0 0 1" />
+    <limit effort="10" velocity="10" lower="-0.349978" upper="2.05858" />
+  </joint>
+  
+  <link name="shaft_10_torsion_mechanism_3">
+    <inertial>
+      <origin xyz="-0.127916 -0.134285 0.012377" rpy="0 0 0" />
+      <mass value="0.386504" />
+      <inertia ixx="0.00249876" ixy="-0.00223606" ixz="0.000108577" iyy="0.00228032" iyz="0.000114122" izz="0.00451162" />
+    </inertial>
+    
+    <visual>
+      <origin xyz="-0.0193803 -0.020209 -0.08477" rpy="1.5708 -0 -1.67145" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/shaft_10_torsion_mechanism.dae" />
+      </geometry>
+      <material name="shaft_10_torsion_mechanism_4_material">
+        <color rgba="0.792157 0.819608 0.933333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0193803 -0.020209 -0.08477" rpy="1.5708 -0 -1.67145" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/shaft_10_torsion_mechanism.dae" />
+      </geometry>
+    </collision>
+    
+    <visual>
+      <origin xyz="-0.109806 -0.0203496 -0.631123" rpy="1.5708 1.5708 0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/chassis_to_trapezoid_both_side_double_eye_1.dae" />
+      </geometry>
+      <material name="chassis_to_trapezoid_both_side_double_eye_1_material">
+        <color rgba="0.792157 0.819608 0.933333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.109806 -0.0203496 -0.631123" rpy="1.5708 1.5708 0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/chassis_to_trapezoid_both_side_double_eye_1.dae" />
+      </geometry>
+    </collision>
+  </link>
+  
+  <link name="trapezoid_single_eye_default_as_machined_2">
+    <inertial>
+      <origin xyz="0.148357 -0.145548 -0.0174289" rpy="0 0 0" />
+      <mass value="2.75976" />
+      <inertia ixx="0.0141228" ixy="0.0133809" ixz="0.000792451" iyy="0.114971" iyz="-0.000167131" izz="0.115717" />
+    </inertial>
+    
+    <visual>
+      <origin xyz="0 0 -0.015" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/trapezoid_single_eye_default_as_machined__2.dae" />
+      </geometry>
+      <material name="trapezoid_single_eye_default_as_machined_9_material">
+        <color rgba="0.792157 0.819608 0.933333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.015" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/trapezoid_single_eye_default_as_machined__2.dae" />
+      </geometry>
+    </collision>
+    
+    <visual>
+      <origin xyz="0.266536 -0.170493 0.0452359" rpy="2.83659 1.5708 0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/motor_160kg_cm_ig52__3.dae" />
+      </geometry>
+      <material name="motor_160kg_cm_ig52_11_material">
+        <color rgba="0.792157 0.819608 0.933333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.266536 -0.170493 0.0452359" rpy="2.83659 1.5708 0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/motor_160kg_cm_ig52__3.dae" />
+      </geometry>
+    </collision>
+    
+    <visual>
+      <origin xyz="0 0 -0.015" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/trapezoid_single_eye_default_as_machined__6.dae" />
+      </geometry>
+      <material name="trapezoid_single_eye_default_as_machined_10_material">
+        <color rgba="0.792157 0.819608 0.933333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.015" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/trapezoid_single_eye_default_as_machined__6.dae" />
+      </geometry>
+    </collision>
+    
+    <visual>
+      <origin xyz="0 0 -0.015" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/trapezoid_single_eye_default_as_machined__4.dae" />
+      </geometry>
+      <material name="trapezoid_single_eye_default_as_machined_11_material">
+        <color rgba="0.792157 0.819608 0.933333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.015" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/trapezoid_single_eye_default_as_machined__4.dae" />
+      </geometry>
+    </collision>
+    
+    <visual>
+      <origin xyz="0 0 -0.015" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/trapezoid_single_eye_default_as_machined__5.dae" />
+      </geometry>
+      <material name="trapezoid_single_eye_default_as_machined_12_material">
+        <color rgba="0.792157 0.819608 0.933333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.015" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/trapezoid_single_eye_default_as_machined__5.dae" />
+      </geometry>
+    </collision>
+    
+    <visual>
+      <origin xyz="0 0 -0.015" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/trapezoid_single_eye_default_as_machined__7.dae" />
+      </geometry>
+      <material name="trapezoid_single_eye_default_as_machined_13_material">
+        <color rgba="0.792157 0.819608 0.933333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.015" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/trapezoid_single_eye_default_as_machined__7.dae" />
+      </geometry>
+    </collision>
+    
+    <visual>
+      <origin xyz="0 0 -0.015" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/trapezoid_single_eye_default_as_machined__3.dae" />
+      </geometry>
+      <material name="trapezoid_single_eye_default_as_machined_14_material">
+        <color rgba="0.792157 0.819608 0.933333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.015" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/trapezoid_single_eye_default_as_machined__3.dae" />
+      </geometry>
+    </collision>
+    
+    <visual>
+      <origin xyz="0.266536 -0.170493 0.0467359" rpy="2.83659 1.5708 0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/motor_160kg_cm_ig52__4.dae" />
+      </geometry>
+      <material name="motor_160kg_cm_ig52_12_material">
+        <color rgba="0.792157 0.819608 0.933333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.266536 -0.170493 0.0467359" rpy="2.83659 1.5708 0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/motor_160kg_cm_ig52__4.dae" />
+      </geometry>
+    </collision>
+    
+    <visual>
+      <origin xyz="0.266536 -0.170493 -0.0135399" rpy="-0.305 1.5708 0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/16_kg_motor_housing__2.dae" />
+      </geometry>
+      <material name="16_kg_motor_housing_6_material">
+        <color rgba="0.792157 0.819608 0.933333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.266536 -0.170493 -0.0135399" rpy="-0.305 1.5708 0" />
+      <geometry>
+        <mesh filename="package://rover_description/meshes/16_kg_motor_housing__2.dae" />
+      </geometry>
+    </collision>
+  </link>
+  
+  <link name="sheet_metal_motor_tyre_2_2">
+    <inertial>
+      <origin xyz="0.00046292 5.49738e-06 0.0266524" rpy="0 0 0" />
+      <mass value="5.26097" />
+      <inertia ixx="0.0324874" ixy="1.7127e-08" ixz="-2.79212e-06" iyy="0.0326651" iyz="-2.11648e-06" izz="0.0517133" />
+    </inertial>
+    
+    <visual><origin xyz="0 0 0" rpy="0 0 0" /><geometry><cylinder radius="0.09" length="0.06" /></geometry><material name="wheel_dark"><color rgba="0.15 0.15 0.15 1" /></material></visual><collision><origin xyz="0 0 0" rpy="0 0 0" /><geometry><sphere radius="0.09" /></geometry></collision></link>
+  
+  <joint name="BL_wheel" type="continuous">
+    <origin xyz="0.266536 -0.170493 0.112252" rpy="-3.14159 0 -2.83659" />
+    <parent link="trapezoid_single_eye_default_as_machined_2" />
+    <child link="sheet_metal_motor_tyre_2_2" />
+    <axis xyz="0 0 -1" />
+    <limit effort="10" velocity="10" />
+  </joint>
+  
+  <joint name="BL_Trap" type="revolute">
+    <origin xyz="-0.254918 -0.267628 0.03" rpy="-0 -0 -1.52526" />
+    <parent link="shaft_10_torsion_mechanism_3" />
+    <child link="trapezoid_single_eye_default_as_machined_2" />
+    <axis xyz="0 0 1" />
+    <limit effort="10" velocity="10" lower="-0.569131" upper="2.2234" />
+  </joint>
+  
+  <joint name="BL_Rod" type="revolute">
+    <origin xyz="0.349619 0.00542608 0.110883" rpy="-1.5708 -1.56232 -1.5708" />
+    <parent link="chassis_default_as_machined" />
+    <child link="shaft_10_torsion_mechanism_3" />
+    <axis xyz="0 0 1" />
+    <limit effort="10" velocity="10" lower="-0.439569" upper="1.91663" />
+  </joint>
+  
+  <joint name="base_link_to_chassis_default_as_machined" type="fixed">
+    <origin xyz="0 0 0" rpy="0 -0 0" />
+    <parent link="base_link" />
+    <child link="chassis_default_as_machined" />
+    <axis xyz="0 0 1" />
+    <limit effort="10" velocity="10" />
+  </joint>
+  
+   
+  <link name="mid_right_mount"><inertial><origin xyz="0 0 0" rpy="0 0 0" /><mass value="0.01" /><inertia ixx="1e-6" iyy="1e-6" izz="1e-6" ixy="0" ixz="0" iyz="0" /></inertial></link><joint name="mid_right_mount_joint" type="fixed"><origin xyz="-0.268802 0.167162 -0.160513" rpy="0 0 0.988601" /><parent link="trapezoid_default_as_machined" /><child link="mid_right_mount" /></joint><link name="mid_left_mount"><inertial><origin xyz="0 0 0" rpy="0 0 0" /><mass value="0.01" /><inertia ixx="1e-6" iyy="1e-6" izz="1e-6" ixy="0" ixz="0" iyz="0" /></inertial></link><joint name="mid_left_mount_joint" type="fixed"><origin xyz="-0.268147 -0.167439 -0.160474" rpy="-0 0 1.09002" /><parent link="trapezoid_default_as_machined_2" /><child link="mid_left_mount" /></joint><gazebo reference="sheet_metal_motor_tyre_fr"><mu1>1.5</mu1><mu2>1.5</mu2><kp>10000000.0</kp><kd>1.0</kd><fdir1>1 0 0</fdir1></gazebo><gazebo reference="sheet_metal_motor_tyre_fr_2"><mu1>1.5</mu1><mu2>1.5</mu2><kp>10000000.0</kp><kd>1.0</kd><fdir1>1 0 0</fdir1></gazebo><gazebo reference="sheet_metal_motor_tyre_fr_3"><mu1>1.5</mu1><mu2>1.5</mu2><kp>10000000.0</kp><kd>1.0</kd><fdir1>1 0 0</fdir1></gazebo><gazebo reference="sheet_metal_motor_tyre_fr_4"><mu1>1.5</mu1><mu2>1.5</mu2><kp>10000000.0</kp><kd>1.0</kd><fdir1>1 0 0</fdir1></gazebo><gazebo reference="sheet_metal_motor_tyre_2"><mu1>1.5</mu1><mu2>1.5</mu2><kp>10000000.0</kp><kd>1.0</kd><fdir1>1 0 0</fdir1></gazebo><gazebo reference="sheet_metal_motor_tyre_2_2"><mu1>1.5</mu1><mu2>1.5</mu2><kp>10000000.0</kp><kd>1.0</kd><fdir1>1 0 0</fdir1></gazebo><ros2_control name="rover_hardware" type="system"><hardware><plugin>gazebo_ros2_control/GazeboSystem</plugin></hardware><joint name="FR_wheel"><command_interface name="velocity"><param name="min">-20</param><param name="max">20</param></command_interface><state_interface name="position" /><state_interface name="velocity" /></joint><joint name="MR_wheel"><command_interface name="velocity"><param name="min">-20</param><param name="max">20</param></command_interface><state_interface name="position" /><state_interface name="velocity" /></joint><joint name="BR_wheel"><command_interface name="velocity"><param name="min">-20</param><param name="max">20</param></command_interface><state_interface name="position" /><state_interface name="velocity" /></joint><joint name="FL_wheel"><command_interface name="velocity"><param name="min">-20</param><param name="max">20</param></command_interface><state_interface name="position" /><state_interface name="velocity" /></joint><joint name="ML_wheel"><command_interface name="velocity"><param name="min">-20</param><param name="max">20</param></command_interface><state_interface name="position" /><state_interface name="velocity" /></joint><joint name="BL_wheel"><command_interface name="velocity"><param name="min">-20</param><param name="max">20</param></command_interface><state_interface name="position" /><state_interface name="velocity" /></joint>
+<joint name="FR_Trap">
+  <state_interface name="position"/>
+  <state_interface name="velocity"/>
+</joint>
+
+<joint name="FR_Rod">
+  <state_interface name="position"/>
+  <state_interface name="velocity"/>
+</joint>
+
+<joint name="BR_Trap">
+  <state_interface name="position"/>
+  <state_interface name="velocity"/>
+</joint>
+
+<joint name="BR_Rod">
+  <state_interface name="position"/>
+  <state_interface name="velocity"/>
+</joint>
+
+<joint name="FL_Trap">
+  <state_interface name="position"/>
+  <state_interface name="velocity"/>
+</joint>
+
+<joint name="FL_Rod">
+  <state_interface name="position"/>
+  <state_interface name="velocity"/>
+</joint>
+
+<joint name="BL_Trap">
+  <state_interface name="position"/>
+  <state_interface name="velocity"/>
+</joint>
+
+<joint name="BL_Rod">
+  <state_interface name="position"/>
+  <state_interface name="velocity"/>
+</joint>
+
+</ros2_control>
+  <gazebo>
+  <plugin name="differential_drive_controller" filename="libgazebo_ros_diff_drive.so">
+    <left_joint>BL_wheel</left_joint>
+    <right_joint>BR_wheel</right_joint>
+    <wheel_separation>0.667</wheel_separation>
+    <wheel_diameter>0.24</wheel_diameter>
+    <max_wheel_torque>20</max_wheel_torque>
+    <max_wheel_acceleration>1.0</max_wheel_acceleration>
+    <publish_odom>true</publish_odom>
+    <publish_odom_tf>true</publish_odom_tf>
+    <publish_wheel_tf>false</publish_wheel_tf>
+    <odometry_frame>odom</odometry_frame>
+    <robot_base_frame>base_footprint</robot_base_frame>
+  </plugin>
+</gazebo><gazebo reference="sheet_metal_motor_tyre_fr"><mu1>1.5</mu1><mu2>1.5</mu2><kp>10000000.0</kp><kd>1.0</kd></gazebo><gazebo reference="sheet_metal_motor_tyre_fr_2"><mu1>1.5</mu1><mu2>1.5</mu2><kp>10000000.0</kp><kd>1.0</kd></gazebo><gazebo reference="sheet_metal_motor_tyre_fr_3"><mu1>1.5</mu1><mu2>1.5</mu2><kp>10000000.0</kp><kd>1.0</kd></gazebo><gazebo reference="sheet_metal_motor_tyre_fr_4"><mu1>1.5</mu1><mu2>1.5</mu2><kp>10000000.0</kp><kd>1.0</kd></gazebo><gazebo reference="sheet_metal_motor_tyre_2"><mu1>1.5</mu1><mu2>1.5</mu2><kp>10000000.0</kp><kd>1.0</kd></gazebo><gazebo reference="sheet_metal_motor_tyre_2_2"><mu1>1.5</mu1><mu2>1.5</mu2><kp>10000000.0</kp><kd>1.0</kd></gazebo>
+
+  
+  <gazebo reference="lidar_link">
+    <sensor name="lidar_sensor" type="ray">
+      <pose>0 0 0 0 0 0</pose>
+
+      <visualize>true</visualize>
+
+      <update_rate>10</update_rate>
+
+      <ray>
+        <scan>
+          <horizontal>
+            <samples>360</samples>
+            <resolution>1</resolution>
+            <min_angle>-3.14159</min_angle>
+            <max_angle>3.14159</max_angle>
+          </horizontal>
+        </scan>
+
+        <range>
+          <min>0.12</min>
+          <max>12.0</max>
+          <resolution>0.01</resolution>
+        </range>
+      </ray>
+
+      <plugin name="lidar_plugin"
+              filename="libgazebo_ros_ray_sensor.so">
+        <ros>
+          <remapping>~/out:=/scan</remapping>
+        </ros>
+
+        <output_type>sensor_msgs/LaserScan</output_type>
+        <frame_name>camera_optical_frame</frame_name>
+      </plugin>
+    </sensor>
+  </gazebo>
+
+</robot>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+  FastDDS Unicast Profile
+  ========================
+  Use this ONLY if your WiFi access point blocks multicast
+  and ROS 2 nodes cannot discover each other automatically.
+
+  On BOTH machines set:
+    export FASTRTPS_DEFAULT_PROFILES_FILE=~/ros2_network/fastdds_unicast.xml
+
+  Jetson    : 192.168.88.10
+  Laptop    : 192.168.88.100
+-->
+<profiles xmlns="http://www.eprosima.com/XMLSchemas/fastRTPS_Profiles">
+
+  <participant profile_name="unicast_participant" is_default_profile="true">
+    <rtps>
+      <builtin>
+        <!-- Disable multicast discovery -->
+        <metatrafficMulticastLocatorList>
+          <locator/>
+        </metatrafficMulticastLocatorList>
+
+        <!-- Unicast discovery peers: add BOTH machine IPs so each end finds the other -->
+        <initialPeersList>
+          <locator>
+            <udpv4>
+              <address>192.168.88.10</address>   <!-- Jetson -->
+            </udpv4>
+          </locator>
+          <locator>
+            <udpv4>
+              <address>192.168.88.100</address>  <!-- Base station laptop -->
+            </udpv4>
+          </locator>
+        </initialPeersList>
+      </builtin>
+    </rtps>
+  </participant>
+
+</profiles>

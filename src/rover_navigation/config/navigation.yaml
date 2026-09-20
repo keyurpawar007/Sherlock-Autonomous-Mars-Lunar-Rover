@@ -1,0 +1,226 @@
+# ============================================================
+# navigation.yaml
+# rover_navigation package configuration
+#
+# Network:
+#   Jetson (rover)       : 192.168.88.10
+#   Base station (laptop): 192.168.88.100
+#   Subnet               : 192.168.88.0/24
+#   ROS_DOMAIN_ID        : 42
+#
+# All values derived directly from rover source code:
+#   - wheel_radius  : 0.11 m (kinematics_node.py)
+#   - track_width   : 1.00 m (kinematics_node.py)
+#   - robot_frame   : base_footprint (wheel_odometry.py, path_follower.py)
+#   - max_rpm       : 300 RPM => max linear ~ 3.46 m/s
+#   - max_wheel_speed: 4.0 rad/s (path_follower.py)
+#   - base_wheel_speed: 2.8 rad/s (path_follower.py)
+#   - stop_distance : 2.00 m (obstacle_avoidance.py)
+#   - caution_distance: 2.30 m (obstacle_avoidance.py)
+# ============================================================
+
+# ------------------------------------------------------------
+# Global Planner (A* over occupancy grid)
+# Source: global_planner.py
+# ------------------------------------------------------------
+global_planner:
+  ros__parameters:
+    use_sim_time: false
+
+    # Topics
+    costmap_topic: /map
+    goal_topic: /goal_pose
+    path_topic: /global_path
+
+    # Frames
+    robot_frame: base_footprint
+
+    # A* traversal
+    # Cells with cost >= obstacle_threshold are blocked
+    obstacle_threshold: 65
+    # Allow planning through unknown (-1) cells
+    allow_unknown: true
+    # Extra cost weight applied to high-cost (inflated) cells
+    cost_weight: 2.0
+
+    # Replanning cooldown to avoid hammering A* on every frame
+    replan_cooldown: 0.75   # seconds
+
+# ------------------------------------------------------------
+# Local Planner (lookahead / pure-pursuit waypoint selector)
+# Source: local_planner.py
+# ------------------------------------------------------------
+local_planner:
+  ros__parameters:
+    use_sim_time: false
+
+    # Distance ahead of the rover to pick the local waypoint
+    # from the global A* path.
+    lookahead_distance: 0.50  # metres
+
+    # Frame used for TF lookup
+    robot_frame: base_footprint
+
+    # Subscribed topics
+    global_path_topic: /global_path
+
+    # Published topic consumed by path_follower
+    local_goal_topic: /local_goal
+
+# ------------------------------------------------------------
+# Path Follower (wheel-speed skid-steer controller)
+# Source: path_follower.py
+# ------------------------------------------------------------
+path_follower:
+  ros__parameters:
+    use_sim_time: false
+
+    # Topics
+    local_goal_topic: /local_goal
+    avoidance_topic: /avoidance_cmd
+    goal_reached_topic: /goal_reached
+    wheel_command_topic: /rover_velocity_controller/commands
+
+    # Frame
+    robot_frame: base_footprint
+
+    # Wheel speeds in rad/s
+    # Rover has 6 wheels (FR,MR,BR,FL,ML,BL) driven as two groups.
+    base_wheel_speed: 2.8     # nominal forward drive speed
+    max_turn_component: 1.6   # max differential added/subtracted per side
+    max_wheel_speed: 4.0      # hardware clamp on any single wheel
+
+    # Steering controller gain (heading_error -> steering scalar)
+    heading_gain: 1.5
+
+    # Distance threshold to declare local waypoint reached
+    goal_tolerance: 0.08  # metres
+
+    # Heading error thresholds for rotate-in-place behaviour
+    # Enter rotate mode when error > 20 deg
+    rotate_enter_angle_deg: 20.0
+    # Leave rotate mode only once error < 8 deg
+    rotate_exit_angle_deg: 8.0
+
+    # Slow-approach distance near local target
+    slow_approach_distance: 0.40  # metres
+    slow_approach_fraction: 0.35  # multiply base_wheel_speed by this
+
+    # Minimum in-place turn command to overcome rover static friction
+    min_inplace_turn: 3.0   # rad/s applied per side
+
+# ------------------------------------------------------------
+# Obstacle Avoidance (D435i depth-image based)
+# Source: obstacle_avoidance.py
+# ------------------------------------------------------------
+obstacle_avoidance:
+  ros__parameters:
+    use_sim_time: false
+
+    # Intel D435i depth image
+    depth_topic: /d435i/depth/image_raw
+
+    # Published topics
+    avoidance_topic: /avoidance_cmd
+    status_topic: /obstacle_status
+
+    # BLOCKED: distance <= stop_distance  -> linear.x = 0.0
+    stop_distance: 2.00    # metres
+
+    # CAUTION: distance <= caution_distance -> linear.x = 0.25
+    caution_distance: 2.30  # metres
+
+    # Forward ROI within the depth image (fraction of W x H)
+    roi_x_start: 0.50
+    roi_x_end:   0.65
+    roi_y_start: 0.20
+    roi_y_end:   0.35
+
+    # Minimum valid depth for a pixel to count as an obstacle
+    min_depth: 0.20  # metres
+    max_depth: 6.00  # metres
+
+    # Reject pixels below this count in a ROI half (treat as clear)
+    min_valid_pixels: 20
+
+    # Use 5th-percentile depth to filter noise spikes
+    depth_percentile: 5
+
+# ------------------------------------------------------------
+# Goal Manager (speed-adaptive approach controller)
+# Source: goal_manager.py
+# ------------------------------------------------------------
+goal_manager:
+  ros__parameters:
+    use_sim_time: false
+
+    # Topics
+    odom_topic: /odometry/fused
+    goal_topic: /navigation/goal
+    cmd_vel_topic: /cmd_vel
+
+    # Distance thresholds for speed shaping (metres)
+    dist_fast_threshold:   2.00   # > 2.0 m  -> v_max = 1.0 m/s
+    dist_medium_threshold: 0.50   # > 0.5 m  -> v_max = 0.4 m/s
+    # below 0.5 m                 ->           v_max = 0.15 m/s (creep)
+
+    # Velocity limits (m/s)
+    v_fast:   1.0
+    v_medium: 0.4
+    v_creep:  0.15
+
+    # Angular velocity limit (rad/s)
+    max_angular_vel: 0.8
+
+    # Angular gain applied to heading error
+    angular_gain: 1.2
+
+    # Pause forward motion while heading error is large
+    heading_brake_angle: 0.5   # radians (~28 deg)
+
+    # Goal considered reached when distance < this value
+    goal_reached_tolerance: 0.20  # metres
+
+    # Control loop rate
+    control_frequency: 20.0   # Hz (timer period = 0.05 s)
+
+# ------------------------------------------------------------
+# Rover Physical Parameters
+# (referenced by kinematics_node.py and wheel_odometry.py)
+# Stored here as documentation / for nodes that load from yaml.
+# ------------------------------------------------------------
+rover:
+  wheel_radius: 0.11        # metres  (22 cm diameter wheels)
+  track_width:  1.00        # metres  (wheel-to-wheel lateral distance)
+  wheelbase:    1.003787    # metres  (from wheel_odometry.py)
+  max_rpm:      300.0       # hardware RPM limit
+  wheels:
+    right: [FR_wheel, MR_wheel, BR_wheel]
+    left:  [FL_wheel, ML_wheel, BL_wheel]
+
+# ------------------------------------------------------------
+# Network Configuration
+# ------------------------------------------------------------
+network:
+  jetson:
+    ip: "192.168.88.10"
+    hostname: "rover-jetson"
+    role: "ROS 2 node host — runs all rover nodes on Jetson"
+    ssh_user: "ubuntu"
+
+  base_station:
+    ip: "192.168.88.100"
+    role: "Ground operator laptop — runs RViz2, teleop, goal sending"
+    rviz_config: "config/navigation.rviz"
+
+  ros2:
+    domain_id: 42
+    rmw: "rmw_fastrtps_cpp"
+    localhost_only: false
+    # If WiFi AP blocks multicast, use fastdds_unicast.xml on both machines.
+    unicast_profile: "ros2_network/fastdds_unicast.xml"
+    env_scripts:
+      jetson:       "ros2_network/jetson_env.sh"
+      base_station: "ros2_network/base_station_env.sh"
+
+  subnet: "192.168.88.0/24"

@@ -1,0 +1,54 @@
+rover_system:
+  network:
+    jetson_ip: "192.168.88.10"         # Rover onboard computer (Jetson)
+    base_station_ip: "192.168.88.100"  # Ground operator laptop
+    subnet: "192.168.88.0/24"
+    ros_domain_id: 42                  # Must match on both machines
+    rmw_implementation: "rmw_fastrtps_cpp"
+    ros_localhost_only: false          # Enable cross-machine discovery
+    # Set FASTRTPS_DEFAULT_PROFILES_FILE=ros2_network/fastdds_unicast.xml
+    # on both machines if your WiFi AP blocks multicast UDP.
+  kinematics:
+    wheel_radius: 0.11        # Diameter 22 cm => Radius 0.11 m
+    track_width: 1.00         # Wheel to wheel length 1.0 m (100 cm)
+    max_rpm: 60.0             # Rhino Servo Planetary Gearbox max rated output 60 RPM
+    encoder_cpr: 93132        # 500-line optical encoder (2000 PPR) * 1:47 Gear Ratio = 93,132 CPR
+    publish_tf: true
+  pid_controller:
+    kp: 1.2
+    ki: 0.05
+    kd: 0.01
+  can_bridge:
+    interface: "can0"          # Jetson SocketCAN interface
+    bitrate: 500000            # 500 kbps CAN Bus bitrate
+    use_mock_hardware: true
+    # CAN Arbitration IDs matching C Firmware
+    can_id_manual: 0x100
+    can_id_stop: 0x101
+    can_id_lora: 0x102
+    can_id_autonomous: 0x103
+    can_id_heartbeat: 0x220
+    can_id_enc_fl: 0x200
+    can_id_enc_fr: 0x201
+    can_id_enc_rl: 0x202
+    can_id_enc_rr: 0x203
+    can_id_drive_status: 0x210
+    failsafe_timeout_ms: 300   # 300 ms CAN Failsafe timeout
+  sensors:
+    gps:
+      use_mock: true
+      latitude_init: 18.531675228344593   # Exact test field GPS coordinates
+      longitude_init: 73.86529303900305
+      altitude_init: 560.0
+    imu:
+      use_mock: true
+  perception:
+    cam_mount_height: 0.35    # D435i camera mounted 35 cm from ground
+    cam_pitch_deg: 12.5       # 10-15 degrees downward tilt
+    cam_x_offset: 0.50        # Camera mounted at front chassis bottom (0.50m forward)
+    drop_threshold_m: 0.15    # Max traversable step/drop height 0.15m (15 cm)
+    max_safe_slope_deg: 35.0  # Max safe hill climb slope 35 degrees
+  safety:
+    stop_safety_dist: 0.90    # Emergency stop braking distance 0.90m (80cm - 1m)
+    timeout_sec: 0.30         # Matches CAN_FAILSAFE_MS (300 ms)
+    max_allowed_variance: 4.0

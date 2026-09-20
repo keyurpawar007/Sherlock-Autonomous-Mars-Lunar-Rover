@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>rover_stm_bridge</name>
+  <version>0.0.1</version>
+  <description>Serial UART and hardware watchdog bridge between Jetson and STM32 motor controller</description>
+  <maintainer email="rover@todo.todo">rover_team</maintainer>
+  <license>Apache-2.0</license>
+
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>rover_interfaces</exec_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>

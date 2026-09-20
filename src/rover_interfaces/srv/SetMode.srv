@@ -1,0 +1,4 @@
+string mode          # Desired mode: TELEOP, AUTONOMOUS, ABEX, IDMO, EMERGENCY_STOP
+---
+bool success         # True if mode switch was accepted
+string message       # Status description or error message

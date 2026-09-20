@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<sdf version="1.6">
+  <world name="rover_world">
+    <!-- Sun light -->
+    <light name="sun" type="directional">
+      <cast_shadows>1</cast_shadows>
+      <pose>0 0 10 0 0 0</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <direction>-0.5 0.1 -0.9</direction>
+    </light>
+
+    <plugin name="gazebo_ros_state" filename="libgazebo_ros_state.so">
+      <ros>
+        <namespace>/gazebo</namespace>
+      </ros>
+      <update_rate>1.0</update_rate>
+    </plugin>
+
+    <!-- Ground plane — built in, no download needed -->
+    <model name="ground_plane">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>1</mu>
+                <mu2>1</mu2>
+              </ode>
+              <bullet>
+                <friction>1</friction>
+                <friction2>1</friction2>
+              </bullet>
+            </friction>
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <material>
+            <ambient>0.8 0.8 0.8 1</ambient>
+            <diffuse>0.8 0.8 0.8 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <gravity>0 0 -9.81</gravity>
+    <physics type="bullet">
+	  <real_time_update_rate>1000</real_time_update_rate>
+	  <max_step_size>0.001</max_step_size>
+	 <bullet>
+	    <solver>
+	      <type>sequential_impulse</type>
+	      <iters>150</iters>
+	    </solver>
+	    <constraints>
+	      <cfm>0.001</cfm>
+	      <erp>0.1</erp>
+	    </constraints>
+  	</bullet>
+</physics>
+  </world>
+</sdf>

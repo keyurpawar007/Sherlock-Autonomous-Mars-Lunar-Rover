@@ -1,0 +1,2523 @@
+<sdf version='1.7'>
+  <model name='rover'>
+    <link name='base_footprint'>
+      <inertial>
+        <pose>0.00252 -0.038617 0.12348 0 -0 0</pose>
+        <mass>9.50689</mass>
+        <inertia>
+          <ixx>0.351487</ixx>
+          <ixy>-0.00291006</ixy>
+          <ixz>0.000289974</ixz>
+          <iyy>0.573259</iyy>
+          <iyz>-0.00666649</iyz>
+          <izz>0.804511</izz>
+        </inertia>
+      </inertial>
+      <collision name='base_footprint_fixed_joint_lump__base_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.6 0.5 0.15</size>
+          </box>
+        </geometry>
+      </collision>
+      <collision name='base_footprint_fixed_joint_lump__chassis_default_as_machined_collision_1'>
+        <pose>-0.295141 0.006002 0.000885 1.56556 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/chassis_default_as_machined.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_footprint_fixed_joint_lump__chassis_default_as_machined_collision_2'>
+        <pose>-0.295141 0.006002 0.000885 1.56556 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/chassis_default_as_machined__2.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_footprint_fixed_joint_lump__chassis_default_as_machined_collision_3'>
+        <pose>0.319859 0.005426 0.110883 3.14159 -0.005237 1.5708</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/attachment_wheel_to_chassis.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_footprint_fixed_joint_lump__chassis_default_as_machined_collision_4'>
+        <pose>-0.295141 0.006002 0.000885 1.56556 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/chassis_default_as_machined__3.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_footprint_fixed_joint_lump__chassis_default_as_machined_collision_5'>
+        <pose>-0.295141 0.006002 0.000885 1.56556 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/chassis_default_as_machined__4.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_footprint_fixed_joint_lump__chassis_default_as_machined_collision_6'>
+        <pose>0.004859 -0.306041 0.199253 1.5708 0.005237 -1.5708</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/bearing_id_12_od_18.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_footprint_fixed_joint_lump__chassis_default_as_machined_collision_7'>
+        <pose>-0.295141 0.006002 0.000885 1.56556 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/chassis_default_as_machined__5.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_footprint_fixed_joint_lump__chassis_default_as_machined_collision_8'>
+        <pose>-0.295141 0.006002 0.000885 1.56556 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/chassis_default_as_machined__6.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_footprint_fixed_joint_lump__chassis_default_as_machined_collision_9'>
+        <pose>-0.295141 0.006002 0.000885 1.56556 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/chassis_default_as_machined__7.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_footprint_fixed_joint_lump__chassis_default_as_machined_collision_10'>
+        <pose>-0.295141 0.006002 0.000885 1.56556 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/chassis_default_as_machined__8.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_footprint_fixed_joint_lump__chassis_default_as_machined_collision_11'>
+        <pose>-0.320141 0.005426 0.110883 3.14159 -0.005237 1.5708</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/attachment_wheel_to_chassis.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_footprint_fixed_joint_lump__chassis_default_as_machined_collision_12'>
+        <pose>-0.295141 0.006002 0.000885 1.56556 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/chassis_default_as_machined__9.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_footprint_fixed_joint_lump__chassis_default_as_machined_collision_13'>
+        <pose>-0.295141 0.006002 0.000885 1.56556 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/chassis_default_as_machined__10.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_footprint_fixed_joint_lump__chassis_default_as_machined_collision_14'>
+        <pose>-0.295141 0.006002 0.000885 1.56556 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/chassis_default_as_machined__11.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_footprint_fixed_joint_lump__chassis_default_as_machined_collision_15'>
+        <pose>-0.295141 0.006002 0.000885 1.56556 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/chassis_default_as_machined__12.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_footprint_fixed_joint_lump__chassis_default_as_machined_collision_16'>
+        <pose>-0.295141 0.006002 0.000885 1.56556 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/chassis_default_as_machined__13.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_footprint_fixed_joint_lump__chassis_default_as_machined_collision_17'>
+        <pose>-0.295141 0.006002 0.000885 1.56556 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/chassis_default_as_machined__14.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_footprint_fixed_joint_lump__chassis_default_as_machined_collision_18'>
+        <pose>-0.295141 0.006002 0.000885 1.56556 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/chassis_default_as_machined__15.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_footprint_fixed_joint_lump__chassis_default_as_machined_collision_19'>
+        <pose>-0.295141 0.006002 0.000885 1.56556 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/chassis_default_as_machined__16.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_footprint_fixed_joint_lump__chassis_default_as_machined_collision_20'>
+        <pose>-0.295141 0.006002 0.000885 1.56556 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/chassis_default_as_machined__17.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_footprint_fixed_joint_lump__chassis_default_as_machined_collision_21'>
+        <pose>0.004859 -0.280041 0.19939 1.5708 0.005237 -1.5708</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/bearing_id_12_od_18.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_footprint_fixed_joint_lump__chassis_default_as_machined_collision_22'>
+        <pose>-0.295141 0.006002 0.000885 1.56556 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/chassis_default_as_machined__18.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_footprint_fixed_joint_lump__chassis_default_as_machined_collision_23'>
+        <pose>-0.295141 0.006002 0.000885 1.56556 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/chassis_default_as_machined__19.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_footprint_fixed_joint_lump__chassis_default_as_machined_collision_24'>
+        <pose>-0.295141 0.006002 0.000885 1.56556 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/chassis_default_as_machined__20.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_footprint_fixed_joint_lump__chassis_default_as_machined_collision_25'>
+        <pose>-0.295141 0.006002 0.000885 1.56556 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/chassis_default_as_machined__21.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_footprint_fixed_joint_lump__chassis_default_as_machined_collision_26'>
+        <pose>-0.295141 0.006002 0.000885 1.56556 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/chassis_default_as_machined__22.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_footprint_fixed_joint_lump__chassis_default_as_machined_collision_27'>
+        <pose>0.004859 -0.145122 0.215096 1.56556 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/robotic_arm_chassis_base_plate.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_footprint_fixed_joint_lump__chassis_default_as_machined_collision_28'>
+        <pose>0.036509 -0.142782 0.105107 1.56556 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/gear_system_enclosure.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_footprint_fixed_joint_lump__chassis_default_as_machined_collision_29'>
+        <pose>-0.295141 0.006002 0.000885 1.56556 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/chassis_default_as_machined__23.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_footprint_fixed_joint_lump__chassis_default_as_machined_collision_30'>
+        <pose>-0.295141 0.006002 0.000885 1.56556 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/chassis_default_as_machined__24.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_footprint_fixed_joint_lump__chassis_default_as_machined_collision_31'>
+        <pose>-0.295141 0.006002 0.000885 1.56556 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/chassis_default_as_machined__25.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_footprint_fixed_joint_lump__chassis_default_as_machined_collision_32'>
+        <pose>-0.295141 0.006002 0.000885 1.56556 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/chassis_default_as_machined__26.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='base_footprint_fixed_joint_lump__chassis_default_as_machined_visual'>
+        <pose>-0.295141 0.006002 0.000885 1.56556 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/chassis_default_as_machined.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_footprint_fixed_joint_lump__chassis_default_as_machined_visual_1'>
+        <pose>-0.295141 0.006002 0.000885 1.56556 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/chassis_default_as_machined__2.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_footprint_fixed_joint_lump__chassis_default_as_machined_visual_2'>
+        <pose>0.319859 0.005426 0.110883 3.14159 -0.005237 1.5708</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/attachment_wheel_to_chassis.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_footprint_fixed_joint_lump__chassis_default_as_machined_visual_3'>
+        <pose>-0.295141 0.006002 0.000885 1.56556 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/chassis_default_as_machined__3.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_footprint_fixed_joint_lump__chassis_default_as_machined_visual_4'>
+        <pose>-0.295141 0.006002 0.000885 1.56556 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/chassis_default_as_machined__4.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_footprint_fixed_joint_lump__chassis_default_as_machined_visual_5'>
+        <pose>0.004859 -0.306041 0.199253 1.5708 0.005237 -1.5708</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/bearing_id_12_od_18.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_footprint_fixed_joint_lump__chassis_default_as_machined_visual_6'>
+        <pose>-0.295141 0.006002 0.000885 1.56556 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/chassis_default_as_machined__5.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_footprint_fixed_joint_lump__chassis_default_as_machined_visual_7'>
+        <pose>-0.295141 0.006002 0.000885 1.56556 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/chassis_default_as_machined__6.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_footprint_fixed_joint_lump__chassis_default_as_machined_visual_8'>
+        <pose>-0.295141 0.006002 0.000885 1.56556 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/chassis_default_as_machined__7.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_footprint_fixed_joint_lump__chassis_default_as_machined_visual_9'>
+        <pose>-0.295141 0.006002 0.000885 1.56556 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/chassis_default_as_machined__8.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_footprint_fixed_joint_lump__chassis_default_as_machined_visual_10'>
+        <pose>-0.320141 0.005426 0.110883 3.14159 -0.005237 1.5708</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/attachment_wheel_to_chassis.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_footprint_fixed_joint_lump__chassis_default_as_machined_visual_11'>
+        <pose>-0.295141 0.006002 0.000885 1.56556 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/chassis_default_as_machined__9.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_footprint_fixed_joint_lump__chassis_default_as_machined_visual_12'>
+        <pose>-0.295141 0.006002 0.000885 1.56556 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/chassis_default_as_machined__10.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_footprint_fixed_joint_lump__chassis_default_as_machined_visual_13'>
+        <pose>-0.295141 0.006002 0.000885 1.56556 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/chassis_default_as_machined__11.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_footprint_fixed_joint_lump__chassis_default_as_machined_visual_14'>
+        <pose>-0.295141 0.006002 0.000885 1.56556 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/chassis_default_as_machined__12.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_footprint_fixed_joint_lump__chassis_default_as_machined_visual_15'>
+        <pose>-0.295141 0.006002 0.000885 1.56556 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/chassis_default_as_machined__13.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_footprint_fixed_joint_lump__chassis_default_as_machined_visual_16'>
+        <pose>-0.295141 0.006002 0.000885 1.56556 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/chassis_default_as_machined__14.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_footprint_fixed_joint_lump__chassis_default_as_machined_visual_17'>
+        <pose>-0.295141 0.006002 0.000885 1.56556 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/chassis_default_as_machined__15.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_footprint_fixed_joint_lump__chassis_default_as_machined_visual_18'>
+        <pose>-0.295141 0.006002 0.000885 1.56556 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/chassis_default_as_machined__16.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_footprint_fixed_joint_lump__chassis_default_as_machined_visual_19'>
+        <pose>-0.295141 0.006002 0.000885 1.56556 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/chassis_default_as_machined__17.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_footprint_fixed_joint_lump__chassis_default_as_machined_visual_20'>
+        <pose>0.004859 -0.280041 0.19939 1.5708 0.005237 -1.5708</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/bearing_id_12_od_18.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_footprint_fixed_joint_lump__chassis_default_as_machined_visual_21'>
+        <pose>-0.295141 0.006002 0.000885 1.56556 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/chassis_default_as_machined__18.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_footprint_fixed_joint_lump__chassis_default_as_machined_visual_22'>
+        <pose>-0.295141 0.006002 0.000885 1.56556 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/chassis_default_as_machined__19.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_footprint_fixed_joint_lump__chassis_default_as_machined_visual_23'>
+        <pose>-0.295141 0.006002 0.000885 1.56556 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/chassis_default_as_machined__20.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_footprint_fixed_joint_lump__chassis_default_as_machined_visual_24'>
+        <pose>-0.295141 0.006002 0.000885 1.56556 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/chassis_default_as_machined__21.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_footprint_fixed_joint_lump__chassis_default_as_machined_visual_25'>
+        <pose>-0.295141 0.006002 0.000885 1.56556 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/chassis_default_as_machined__22.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_footprint_fixed_joint_lump__chassis_default_as_machined_visual_26'>
+        <pose>0.004859 -0.145122 0.215096 1.56556 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/robotic_arm_chassis_base_plate.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_footprint_fixed_joint_lump__chassis_default_as_machined_visual_27'>
+        <pose>0.036509 -0.142782 0.105107 1.56556 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/gear_system_enclosure.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_footprint_fixed_joint_lump__chassis_default_as_machined_visual_28'>
+        <pose>-0.295141 0.006002 0.000885 1.56556 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/chassis_default_as_machined__23.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_footprint_fixed_joint_lump__chassis_default_as_machined_visual_29'>
+        <pose>-0.295141 0.006002 0.000885 1.56556 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/chassis_default_as_machined__24.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_footprint_fixed_joint_lump__chassis_default_as_machined_visual_30'>
+        <pose>-0.295141 0.006002 0.000885 1.56556 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/chassis_default_as_machined__25.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_footprint_fixed_joint_lump__chassis_default_as_machined_visual_31'>
+        <pose>-0.295141 0.006002 0.000885 1.56556 -0 -3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/chassis_default_as_machined__26.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='BL_Rod' type='revolute'>
+      <pose relative_to='base_footprint'>0.349619 0.005426 0.110883 -1.5708 -1.56232 -1.5708</pose>
+      <parent>base_footprint</parent>
+      <child>shaft_10_torsion_mechanism_3</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-0.439569</lower>
+          <upper>1.91663</upper>
+          <effort>10</effort>
+          <velocity>10</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='shaft_10_torsion_mechanism_3'>
+      <pose relative_to='BL_Rod'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>-0.127916 -0.134285 0.012377 0 -0 0</pose>
+        <mass>0.386504</mass>
+        <inertia>
+          <ixx>0.00249876</ixx>
+          <ixy>-0.00223606</ixy>
+          <ixz>0.000108577</ixz>
+          <iyy>0.00228032</iyy>
+          <iyz>0.000114122</iyz>
+          <izz>0.00451162</izz>
+        </inertia>
+      </inertial>
+      <collision name='shaft_10_torsion_mechanism_3_collision'>
+        <pose>-0.01938 -0.020209 -0.08477 1.5708 0 -1.67145</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/shaft_10_torsion_mechanism.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='shaft_10_torsion_mechanism_3_collision_1'>
+        <pose>-0.109806 -0.02035 -0.631123 1.5708 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/chassis_to_trapezoid_both_side_double_eye_1.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='shaft_10_torsion_mechanism_3_visual'>
+        <pose>-0.01938 -0.020209 -0.08477 1.5708 0 -1.67145</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/shaft_10_torsion_mechanism.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='shaft_10_torsion_mechanism_3_visual_1'>
+        <pose>-0.109806 -0.02035 -0.631123 1.5708 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/chassis_to_trapezoid_both_side_double_eye_1.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='BL_Trap' type='revolute'>
+      <pose relative_to='shaft_10_torsion_mechanism_3'>-0.254918 -0.267628 0.03 0 0 -1.52526</pose>
+      <parent>shaft_10_torsion_mechanism_3</parent>
+      <child>trapezoid_single_eye_default_as_machined_2</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-0.569131</lower>
+          <upper>2.2234</upper>
+          <effort>10</effort>
+          <velocity>10</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='trapezoid_single_eye_default_as_machined_2'>
+      <velocity_decay>
+        <linear>0.1</linear>
+        <angular>0.1</angular>
+      </velocity_decay>
+      <pose relative_to='BL_Trap'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0.148357 -0.145548 -0.017429 0 -0 0</pose>
+        <mass>2.75976</mass>
+        <inertia>
+          <ixx>0.0141228</ixx>
+          <ixy>0.0133809</ixy>
+          <ixz>0.000792451</ixz>
+          <iyy>0.114971</iyy>
+          <iyz>-0.000167131</iyz>
+          <izz>0.115717</izz>
+        </inertia>
+      </inertial>
+      <collision name='trapezoid_single_eye_default_as_machined_2_collision'>
+        <pose>0 0 -0.015 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/trapezoid_single_eye_default_as_machined__2.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='trapezoid_single_eye_default_as_machined_2_collision_1'>
+        <pose>0.266536 -0.170493 0.045236 2.83659 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/motor_160kg_cm_ig52__3.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='trapezoid_single_eye_default_as_machined_2_collision_2'>
+        <pose>0 0 -0.015 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/trapezoid_single_eye_default_as_machined__6.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='trapezoid_single_eye_default_as_machined_2_collision_3'>
+        <pose>0 0 -0.015 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/trapezoid_single_eye_default_as_machined__4.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='trapezoid_single_eye_default_as_machined_2_collision_4'>
+        <pose>0 0 -0.015 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/trapezoid_single_eye_default_as_machined__5.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='trapezoid_single_eye_default_as_machined_2_collision_5'>
+        <pose>0 0 -0.015 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/trapezoid_single_eye_default_as_machined__7.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='trapezoid_single_eye_default_as_machined_2_collision_6'>
+        <pose>0 0 -0.015 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/trapezoid_single_eye_default_as_machined__3.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='trapezoid_single_eye_default_as_machined_2_collision_7'>
+        <pose>0.266536 -0.170493 0.046736 2.83659 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/motor_160kg_cm_ig52__4.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='trapezoid_single_eye_default_as_machined_2_collision_8'>
+        <pose>0.266536 -0.170493 -0.01354 -0.304999 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/16_kg_motor_housing__2.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='trapezoid_single_eye_default_as_machined_2_visual'>
+        <pose>0 0 -0.015 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/trapezoid_single_eye_default_as_machined__2.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='trapezoid_single_eye_default_as_machined_2_visual_1'>
+        <pose>0.266536 -0.170493 0.045236 2.83659 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/motor_160kg_cm_ig52__3.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='trapezoid_single_eye_default_as_machined_2_visual_2'>
+        <pose>0 0 -0.015 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/trapezoid_single_eye_default_as_machined__6.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='trapezoid_single_eye_default_as_machined_2_visual_3'>
+        <pose>0 0 -0.015 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/trapezoid_single_eye_default_as_machined__4.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='trapezoid_single_eye_default_as_machined_2_visual_4'>
+        <pose>0 0 -0.015 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/trapezoid_single_eye_default_as_machined__5.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='trapezoid_single_eye_default_as_machined_2_visual_5'>
+        <pose>0 0 -0.015 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/trapezoid_single_eye_default_as_machined__7.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='trapezoid_single_eye_default_as_machined_2_visual_6'>
+        <pose>0 0 -0.015 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/trapezoid_single_eye_default_as_machined__3.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='trapezoid_single_eye_default_as_machined_2_visual_7'>
+        <pose>0.266536 -0.170493 0.046736 2.83659 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/motor_160kg_cm_ig52__4.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='trapezoid_single_eye_default_as_machined_2_visual_8'>
+        <pose>0.266536 -0.170493 -0.01354 -0.304999 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/16_kg_motor_housing__2.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='BL_wheel' type='revolute'>
+      <pose relative_to='trapezoid_single_eye_default_as_machined_2'>0.266536 -0.170493 0.112252 -3.14159 -0 -2.83659</pose>
+      <parent>trapezoid_single_eye_default_as_machined_2</parent>
+      <child>sheet_metal_motor_tyre_2_2</child>
+      <axis>
+        <xyz>0 0 -1</xyz>
+        <limit>
+          <effort>10</effort>
+          <velocity>10</velocity>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='sheet_metal_motor_tyre_2_2'>
+      <pose relative_to='BL_wheel'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0.000463 5e-06 0.026652 0 -0 0</pose>
+        <mass>5.26097</mass>
+        <inertia>
+          <ixx>0.0324874</ixx>
+          <ixy>1.7127e-08</ixy>
+          <ixz>-2.79212e-06</ixz>
+          <iyy>0.0326651</iyy>
+          <iyz>-2.11648e-06</iyz>
+          <izz>0.0517133</izz>
+        </inertia>
+      </inertial>
+      <collision name='sheet_metal_motor_tyre_2_2_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.06</length>
+            <radius>0.09</radius>
+          </cylinder>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <kp>1e+07</kp>
+              <kd>1</kd>
+            </ode>
+          </contact>
+          <friction>
+            <ode>
+              <fdir1>1 0 0</fdir1>
+              <mu>1.5</mu>
+              <mu2>0.2</mu2>
+            </ode>
+             <bullet>
+    <friction>1.5</friction>
+    <friction2>0.2</friction2>
+    <fdir1>1 0 0</fdir1>
+    <rolling_friction>0.1</rolling_friction>
+  </bullet>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='sheet_metal_motor_tyre_2_2_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.06</length>
+            <radius>0.09</radius>
+          </cylinder>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='BR_Rod' type='revolute'>
+      <pose relative_to='base_footprint'>-0.380381 0.005426 0.110883 -1.5708 0.903014 -1.5708</pose>
+      <parent>base_footprint</parent>
+      <child>shaft_10_torsion_mechanism</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-0.461445</lower>
+          <upper>1.80748</upper>
+          <effort>10</effort>
+          <velocity>10</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='shaft_10_torsion_mechanism'>
+      <pose relative_to='BR_Rod'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>-0 0.185459 0.017685 0 -0 0</pose>
+        <mass>0.386504</mass>
+        <inertia>
+          <ixx>0.00462913</ixx>
+          <ixy>-4.08e-10</ixy>
+          <ixz>-2.3e-11</ixz>
+          <iyy>0.000151671</iyy>
+          <iyz>0.000165482</iyz>
+          <izz>0.00451162</izz>
+        </inertia>
+      </inertial>
+      <collision name='shaft_10_torsion_mechanism_collision'>
+        <pose>0 0.004802 0.03525 3.14159 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/chassis_to_trapezoid_both_side_double_eye.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='shaft_10_torsion_mechanism_collision_1'>
+        <pose>0 0.028 -0.00475 1.5708 -0 -0.919596</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/shaft_10_torsion_mechanism.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='shaft_10_torsion_mechanism_visual'>
+        <pose>0 0.004802 0.03525 3.14159 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/chassis_to_trapezoid_both_side_double_eye.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='shaft_10_torsion_mechanism_visual_1'>
+        <pose>0 0.028 -0.00475 1.5708 -0 -0.919596</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/shaft_10_torsion_mechanism.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='BR_Trap' type='revolute'>
+      <pose relative_to='shaft_10_torsion_mechanism'>0 0.369605 0 3.14159 -0 2.15666</pose>
+      <parent>shaft_10_torsion_mechanism</parent>
+      <child>trapezoid_single_eye_default_as_machined</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-2.38119</lower>
+          <upper>0.411332</upper>
+          <effort>10</effort>
+          <velocity>10</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='trapezoid_single_eye_default_as_machined'>
+      <velocity_decay>
+        <linear>0.1</linear>
+        <angular>0.1</angular>
+      </velocity_decay>
+      <pose relative_to='BR_Trap'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0.1495 0.142776 -0.016789 0 -0 0</pose>
+        <mass>2.75976</mass>
+        <inertia>
+          <ixx>0.013759</ixx>
+          <ixy>-0.0125511</ixy>
+          <ixz>0.00058621</ixz>
+          <iyy>0.115725</iyy>
+          <iyz>0.000116192</iyz>
+          <izz>0.116094</izz>
+        </inertia>
+      </inertial>
+      <collision name='trapezoid_single_eye_default_as_machined_collision'>
+        <pose>0.268274 0.166273 -0.012195 -1.87277 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/16_kg_motor_housing__2.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='trapezoid_single_eye_default_as_machined_collision_1'>
+        <pose>0 0 -0.015 -1.5708 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/trapezoid_single_eye_default_as_machined__2.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='trapezoid_single_eye_default_as_machined_collision_2'>
+        <pose>0 0 -0.015 -1.5708 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/trapezoid_single_eye_default_as_machined__3.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='trapezoid_single_eye_default_as_machined_collision_3'>
+        <pose>0 0 -0.015 -1.5708 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/trapezoid_single_eye_default_as_machined__4.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='trapezoid_single_eye_default_as_machined_collision_4'>
+        <pose>0 0 -0.015 -1.5708 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/trapezoid_single_eye_default_as_machined__5.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='trapezoid_single_eye_default_as_machined_collision_5'>
+        <pose>0 0 -0.015 -1.5708 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/trapezoid_single_eye_default_as_machined__6.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='trapezoid_single_eye_default_as_machined_collision_6'>
+        <pose>0 0 -0.015 -1.5708 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/trapezoid_single_eye_default_as_machined__7.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='trapezoid_single_eye_default_as_machined_collision_7'>
+        <pose>0.268274 0.166273 0.046081 0.67448 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/motor_160kg_cm_ig52__3.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='trapezoid_single_eye_default_as_machined_collision_8'>
+        <pose>0.268274 0.166273 0.046081 0.67448 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/motor_160kg_cm_ig52__4.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='trapezoid_single_eye_default_as_machined_visual'>
+        <pose>0.268274 0.166273 -0.012195 -1.87277 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/16_kg_motor_housing__2.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='trapezoid_single_eye_default_as_machined_visual_1'>
+        <pose>0 0 -0.015 -1.5708 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/trapezoid_single_eye_default_as_machined__2.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='trapezoid_single_eye_default_as_machined_visual_2'>
+        <pose>0 0 -0.015 -1.5708 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/trapezoid_single_eye_default_as_machined__3.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='trapezoid_single_eye_default_as_machined_visual_3'>
+        <pose>0 0 -0.015 -1.5708 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/trapezoid_single_eye_default_as_machined__4.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='trapezoid_single_eye_default_as_machined_visual_4'>
+        <pose>0 0 -0.015 -1.5708 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/trapezoid_single_eye_default_as_machined__5.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='trapezoid_single_eye_default_as_machined_visual_5'>
+        <pose>0 0 -0.015 -1.5708 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/trapezoid_single_eye_default_as_machined__6.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='trapezoid_single_eye_default_as_machined_visual_6'>
+        <pose>0 0 -0.015 -1.5708 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/trapezoid_single_eye_default_as_machined__7.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='trapezoid_single_eye_default_as_machined_visual_7'>
+        <pose>0.268274 0.166273 0.046081 0.67448 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/motor_160kg_cm_ig52__3.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='trapezoid_single_eye_default_as_machined_visual_8'>
+        <pose>0.268274 0.166273 0.046081 0.67448 1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/motor_160kg_cm_ig52__4.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='BR_wheel' type='revolute'>
+      <pose relative_to='trapezoid_single_eye_default_as_machined'>0.268274 0.166273 0.113097 -3.14159 -0 -0.674482</pose>
+      <parent>trapezoid_single_eye_default_as_machined</parent>
+      <child>sheet_metal_motor_tyre_fr_3</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>10</effort>
+          <velocity>10</velocity>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='sheet_metal_motor_tyre_fr_3'>
+      <pose relative_to='BR_wheel'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0.000463 5e-06 0.026652 0 -0 0</pose>
+        <mass>5.26097</mass>
+        <inertia>
+          <ixx>0.0324874</ixx>
+          <ixy>1.7127e-08</ixy>
+          <ixz>-2.79212e-06</ixz>
+          <iyy>0.0326651</iyy>
+          <iyz>-2.11648e-06</iyz>
+          <izz>0.0517133</izz>
+        </inertia>
+      </inertial>
+      <collision name='sheet_metal_motor_tyre_fr_3_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.06</length>
+            <radius>0.09</radius>
+          </cylinder>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <kp>1e+07</kp>
+              <kd>1</kd>
+            </ode>
+          </contact>
+          <friction>
+            <ode>
+              <fdir1>1 0 0</fdir1>
+              <mu>1.5</mu>
+              <mu2>0.2</mu2>
+            </ode>
+             <bullet>
+    <friction>1.5</friction>
+    <friction2>0.2</friction2>
+    <fdir1>1 0 0</fdir1>
+    <rolling_friction>0.1</rolling_friction>
+  </bullet>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='sheet_metal_motor_tyre_fr_3_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.06</length>
+            <radius>0.09</radius>
+          </cylinder>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='FL_Rod' type='revolute'>
+      <pose relative_to='base_footprint'>0.364859 0.005426 0.110883 -1.5708 0.693807 1.5708</pose>
+      <parent>base_footprint</parent>
+      <child>shaft_10_torsion_mechanism_2</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-0.349978</lower>
+          <upper>2.05858</upper>
+          <effort>10</effort>
+          <velocity>10</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='shaft_10_torsion_mechanism_2'>
+      <pose relative_to='FL_Rod'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0.171668 0.003188 0 -0 0</pose>
+        <mass>0.4139</mass>
+        <inertia>
+          <ixx>0.00559507</ixx>
+          <ixy>-3.36e-10</ixy>
+          <ixz>-5.7e-11</ixz>
+          <iyy>0.000156306</iyy>
+          <iyz>0.000179344</iyz>
+          <izz>0.00548475</izz>
+        </inertia>
+      </inertial>
+      <collision name='shaft_10_torsion_mechanism_2_collision'>
+        <pose>0 0.004802 0.0205 -3.14159 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/chassis_to_trapezoid_rod.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='shaft_10_torsion_mechanism_2_collision_1'>
+        <pose>0 0.028 0.11 -1.5708 -0 0.883446</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/shaft_10_torsion_mechanism.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='shaft_10_torsion_mechanism_2_visual'>
+        <pose>0 0.004802 0.0205 -3.14159 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/chassis_to_trapezoid_rod.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='shaft_10_torsion_mechanism_2_visual_1'>
+        <pose>0 0.028 0.11 -1.5708 -0 0.883446</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/shaft_10_torsion_mechanism.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='FL_Trap' type='revolute'>
+      <pose relative_to='shaft_10_torsion_mechanism_2'>0 0.369605 0.01525 0 -0 2.36424</pose>
+      <parent>shaft_10_torsion_mechanism_2</parent>
+      <child>trapezoid_default_as_machined_2</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-0.618907</lower>
+          <upper>2.17362</upper>
+          <effort>10</effort>
+          <velocity>10</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='trapezoid_default_as_machined_2'>
+      <velocity_decay>
+        <linear>0.1</linear>
+        <angular>0.1</angular>
+      </velocity_decay>
+      <pose relative_to='FL_Trap'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>-0.02863 -0.152803 -0.020276 0 -0 0</pose>
+        <mass>4.8339</mass>
+        <inertia>
+          <ixx>0.0225087</ixx>
+          <ixy>0.00213122</ixy>
+          <ixz>-0.00721635</ixz>
+          <iyy>0.326782</iyy>
+          <iyz>-0.000373136</iyz>
+          <izz>0.321359</izz>
+        </inertia>
+      </inertial>
+      <collision name='trapezoid_default_as_machined_2_collision'>
+        <pose>-0.268147 -0.167439 -0.034682 -0.480771 -1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/16_kg_motor_housing__2.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='trapezoid_default_as_machined_2_collision_1'>
+        <pose>0 0 -0.015 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/trapezoid_default_as_machined__7.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='trapezoid_default_as_machined_2_collision_2'>
+        <pose>0.267653 -0.16763 -0.019018 -0.480771 -1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/16_kg_motor_housing__2.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='trapezoid_default_as_machined_2_collision_3'>
+        <pose>0 0 -0.015 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/trapezoid_default_as_machined.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='trapezoid_default_as_machined_2_collision_4'>
+        <pose>0.267653 -0.16763 -0.077794 2.66082 -1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/motor_160kg_cm_ig52__3.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='trapezoid_default_as_machined_2_collision_5'>
+        <pose>-0.428023 0.105303 -0.009984 -1.5708 -0 2.66082</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/trapezoid_single_eye_default_as_machined.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='trapezoid_default_as_machined_2_collision_6'>
+        <pose>0 0 -0.015 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/trapezoid_default_as_machined__6.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='trapezoid_default_as_machined_2_collision_7'>
+        <pose>0 0 -0.015 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/trapezoid_default_as_machined__2.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='trapezoid_default_as_machined_2_collision_8'>
+        <pose>-0.268147 -0.167439 -0.094957 2.66082 -1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/motor_160kg_cm_ig52__4.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='trapezoid_default_as_machined_2_collision_9'>
+        <pose>0.267653 -0.16763 -0.079294 2.66082 -1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/motor_160kg_cm_ig52__4.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='trapezoid_default_as_machined_2_collision_10'>
+        <pose>0 0 -0.015 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/trapezoid_default_as_machined__8.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='trapezoid_default_as_machined_2_collision_11'>
+        <pose>0 0 -0.015 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/trapezoid_default_as_machined__4.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='trapezoid_default_as_machined_2_collision_12'>
+        <pose>-0.268147 -0.167439 -0.093457 2.66082 -1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/motor_160kg_cm_ig52__3.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='trapezoid_default_as_machined_2_collision_13'>
+        <pose>0 0 -0.015 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/trapezoid_default_as_machined__9.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='trapezoid_default_as_machined_2_collision_14'>
+        <pose>0 0 -0.015 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/trapezoid_default_as_machined__3.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='trapezoid_default_as_machined_2_collision_15'>
+        <pose>0 0 -0.015 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/trapezoid_default_as_machined__5.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='trapezoid_default_as_machined_2_visual'>
+        <pose>-0.268147 -0.167439 -0.034682 -0.480771 -1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/16_kg_motor_housing__2.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='trapezoid_default_as_machined_2_visual_1'>
+        <pose>0 0 -0.015 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/trapezoid_default_as_machined__7.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='trapezoid_default_as_machined_2_visual_2'>
+        <pose>0.267653 -0.16763 -0.019018 -0.480771 -1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/16_kg_motor_housing__2.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='trapezoid_default_as_machined_2_visual_3'>
+        <pose>0 0 -0.015 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/trapezoid_default_as_machined.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='trapezoid_default_as_machined_2_visual_4'>
+        <pose>0.267653 -0.16763 -0.077794 2.66082 -1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/motor_160kg_cm_ig52__3.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='trapezoid_default_as_machined_2_visual_5'>
+        <pose>-0.428023 0.105303 -0.009984 -1.5708 -0 2.66082</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/trapezoid_single_eye_default_as_machined.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='trapezoid_default_as_machined_2_visual_6'>
+        <pose>0 0 -0.015 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/trapezoid_default_as_machined__6.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='trapezoid_default_as_machined_2_visual_7'>
+        <pose>0 0 -0.015 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/trapezoid_default_as_machined__2.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='trapezoid_default_as_machined_2_visual_8'>
+        <pose>-0.268147 -0.167439 -0.094957 2.66082 -1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/motor_160kg_cm_ig52__4.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='trapezoid_default_as_machined_2_visual_9'>
+        <pose>0.267653 -0.16763 -0.079294 2.66082 -1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/motor_160kg_cm_ig52__4.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='trapezoid_default_as_machined_2_visual_10'>
+        <pose>0 0 -0.015 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/trapezoid_default_as_machined__8.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='trapezoid_default_as_machined_2_visual_11'>
+        <pose>0 0 -0.015 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/trapezoid_default_as_machined__4.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='trapezoid_default_as_machined_2_visual_12'>
+        <pose>-0.268147 -0.167439 -0.093457 2.66082 -1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/motor_160kg_cm_ig52__3.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='trapezoid_default_as_machined_2_visual_13'>
+        <pose>0 0 -0.015 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/trapezoid_default_as_machined__9.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='trapezoid_default_as_machined_2_visual_14'>
+        <pose>0 0 -0.015 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/trapezoid_default_as_machined__3.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='trapezoid_default_as_machined_2_visual_15'>
+        <pose>0 0 -0.015 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/trapezoid_default_as_machined__5.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='FL_wheel' type='revolute'>
+      <pose relative_to='trapezoid_default_as_machined_2'>0.267653 -0.16763 -0.14481 0 0 -0.480773</pose>
+      <parent>trapezoid_default_as_machined_2</parent>
+      <child>sheet_metal_motor_tyre_fr_4</child>
+      <axis>
+        <xyz>0 0 -1</xyz>
+        <limit>
+          <effort>10</effort>
+          <velocity>10</velocity>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='sheet_metal_motor_tyre_fr_4'>
+      <pose relative_to='FL_wheel'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0.000463 5e-06 0.026652 0 -0 0</pose>
+        <mass>5.26097</mass>
+        <inertia>
+          <ixx>0.0324874</ixx>
+          <ixy>1.7127e-08</ixy>
+          <ixz>-2.79212e-06</ixz>
+          <iyy>0.0326651</iyy>
+          <iyz>-2.11648e-06</iyz>
+          <izz>0.0517133</izz>
+        </inertia>
+      </inertial>
+      <collision name='sheet_metal_motor_tyre_fr_4_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.06</length>
+            <radius>0.09</radius>
+          </cylinder>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <kp>1e+07</kp>
+              <kd>1</kd>
+            </ode>
+          </contact>
+          <friction>
+            <ode>
+              <fdir1>1 0 0</fdir1>
+              <mu>1.5</mu>
+              <mu2>0.2</mu2>
+            </ode>
+             <bullet>
+    <friction>1.5</friction>
+    <friction2>0.2</friction2>
+    <fdir1>1 0 0</fdir1>
+    <rolling_friction>0.1</rolling_friction>
+  </bullet>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='sheet_metal_motor_tyre_fr_4_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.06</length>
+            <radius>0.09</radius>
+          </cylinder>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='ML_wheel' type='revolute'>
+      <pose relative_to='trapezoid_default_as_machined_2'>-0.268147 -0.167439 -0.160474 0 -0 1.09002</pose>
+      <parent>trapezoid_default_as_machined_2</parent>
+      <child>sheet_metal_motor_tyre_2</child>
+      <axis>
+        <xyz>0 0 -1</xyz>
+        <limit>
+          <effort>10</effort>
+          <velocity>10</velocity>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='sheet_metal_motor_tyre_2'>
+      <pose relative_to='ML_wheel'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0.000463 5e-06 0.026652 0 -0 0</pose>
+        <mass>5.26097</mass>
+        <inertia>
+          <ixx>0.0324874</ixx>
+          <ixy>1.7127e-08</ixy>
+          <ixz>-2.79212e-06</ixz>
+          <iyy>0.0326651</iyy>
+          <iyz>-2.11648e-06</iyz>
+          <izz>0.0517133</izz>
+        </inertia>
+      </inertial>
+      <collision name='sheet_metal_motor_tyre_2_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.06</length>
+            <radius>0.09</radius>
+          </cylinder>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <kp>1e+07</kp>
+              <kd>1</kd>
+            </ode>
+          </contact>
+          <friction>
+            <ode>
+              <fdir1>1 0 0</fdir1>
+              <mu>1.5</mu>
+              <mu2>0.2</mu2>
+            </ode>
+             <bullet>
+    <friction>1.5</friction>
+    <friction2>0.2</friction2>
+    <fdir1>1 0 0</fdir1>
+    <rolling_friction>0.1</rolling_friction>
+  </bullet>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='sheet_metal_motor_tyre_2_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.06</length>
+            <radius>0.09</radius>
+          </cylinder>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='FR_Rod' type='revolute'>
+      <pose relative_to='base_footprint'>-0.365141 0.005426 0.110883 -1.5708 0.864431 1.5708</pose>
+      <parent>base_footprint</parent>
+      <child>chassis_to_trapezoid_rod</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-0.468242</lower>
+          <upper>1.92286</upper>
+          <effort>10</effort>
+          <velocity>10</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='chassis_to_trapezoid_rod'>
+      <pose relative_to='FR_Rod'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0.171668 -0.003006 0 -0 0</pose>
+        <mass>0.4139</mass>
+        <inertia>
+          <ixx>0.00559553</ixx>
+          <ixy>-3.36e-10</ixy>
+          <ixz>-7e-11</ixz>
+          <iyy>0.000156772</iyy>
+          <iyz>-0.000188956</iyz>
+          <izz>0.00548475</izz>
+        </inertia>
+      </inertial>
+      <collision name='chassis_to_trapezoid_rod_collision'>
+        <pose>0 0.028 0.01 -1.5708 -0 -1.63989</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/shaft_10_torsion_mechanism.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='chassis_to_trapezoid_rod_collision_1'>
+        <pose>0 0.004802 0.0205 -3.14159 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/chassis_to_trapezoid_rod.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='chassis_to_trapezoid_rod_visual'>
+        <pose>0 0.028 0.01 -1.5708 -0 -1.63989</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/shaft_10_torsion_mechanism.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='chassis_to_trapezoid_rod_visual_1'>
+        <pose>0 0.004802 0.0205 -3.14159 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/chassis_to_trapezoid_rod.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='FR_Trap' type='revolute'>
+      <pose relative_to='chassis_to_trapezoid_rod'>0 0.369605 -0.01475 3.14159 0 2.22388</pose>
+      <parent>chassis_to_trapezoid_rod</parent>
+      <child>trapezoid_default_as_machined</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-2.31398</lower>
+          <upper>0.478546</upper>
+          <effort>10</effort>
+          <velocity>10</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='trapezoid_default_as_machined'>
+      <velocity_decay>
+        <linear>0.1</linear>
+        <angular>0.1</angular>
+      </velocity_decay>
+      <pose relative_to='FR_Trap'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>-0.029106 0.152388 -0.02391 0 -0 0</pose>
+        <mass>4.8339</mass>
+        <inertia>
+          <ixx>0.0223515</ixx>
+          <ixy>-0.00177998</ixy>
+          <ixz>-0.00229716</ixz>
+          <iyy>0.326631</iyy>
+          <iyz>0.000630537</iyz>
+          <izz>0.321248</izz>
+        </inertia>
+      </inertial>
+      <collision name='trapezoid_default_as_machined_collision'>
+        <pose>-0.268802 0.167162 -0.093497 0.988598 -1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/motor_160kg_cm_ig52.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='trapezoid_default_as_machined_collision_1'>
+        <pose>-0.268802 0.167162 -0.093497 0.988598 -1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/motor_160kg_cm_ig52__2.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='trapezoid_default_as_machined_collision_2'>
+        <pose>0 0 -0.015 -1.5708 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/trapezoid_default_as_machined.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='trapezoid_default_as_machined_collision_3'>
+        <pose>-0.268802 0.167162 -0.035221 -1.55865 -1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/16_kg_motor_housing.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='trapezoid_default_as_machined_collision_4'>
+        <pose>0.267061 0.166809 -0.028798 -1.81629 -1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/16_kg_motor_housing.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='trapezoid_default_as_machined_collision_5'>
+        <pose>0 0 -0.015 -1.5708 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/trapezoid_default_as_machined__2.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='trapezoid_default_as_machined_collision_6'>
+        <pose>0 0 -0.015 -1.5708 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/trapezoid_default_as_machined__3.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='trapezoid_default_as_machined_collision_7'>
+        <pose>0.267061 0.166809 -0.087074 0.730958 -1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/motor_160kg_cm_ig52.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='trapezoid_default_as_machined_collision_8'>
+        <pose>0 0 -0.015 -1.5708 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/trapezoid_default_as_machined__4.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='trapezoid_default_as_machined_collision_9'>
+        <pose>0 0 -0.015 -1.5708 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/trapezoid_default_as_machined__5.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='trapezoid_default_as_machined_collision_10'>
+        <pose>0 0 -0.015 -1.5708 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/trapezoid_default_as_machined__6.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='trapezoid_default_as_machined_collision_11'>
+        <pose>0 0 -0.015 -1.5708 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/trapezoid_default_as_machined__7.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='trapezoid_default_as_machined_collision_12'>
+        <pose>0 0 -0.015 -1.5708 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/trapezoid_default_as_machined__8.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='trapezoid_default_as_machined_collision_13'>
+        <pose>-0.534629 -0.003965 -0.015523 1.5708 -0 -3.12945</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/trapezoid_single_eye_default_as_machined.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='trapezoid_default_as_machined_collision_14'>
+        <pose>0.267061 0.166809 -0.087074 0.730958 -1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/motor_160kg_cm_ig52__2.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='trapezoid_default_as_machined_collision_15'>
+        <pose>0 0 -0.015 -1.5708 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/trapezoid_default_as_machined__9.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='trapezoid_default_as_machined_visual'>
+        <pose>-0.268802 0.167162 -0.093497 0.988598 -1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/motor_160kg_cm_ig52.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='trapezoid_default_as_machined_visual_1'>
+        <pose>-0.268802 0.167162 -0.093497 0.988598 -1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/motor_160kg_cm_ig52__2.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='trapezoid_default_as_machined_visual_2'>
+        <pose>0 0 -0.015 -1.5708 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/trapezoid_default_as_machined.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='trapezoid_default_as_machined_visual_3'>
+        <pose>-0.268802 0.167162 -0.035221 -1.55865 -1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/16_kg_motor_housing.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='trapezoid_default_as_machined_visual_4'>
+        <pose>0.267061 0.166809 -0.028798 -1.81629 -1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/16_kg_motor_housing.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='trapezoid_default_as_machined_visual_5'>
+        <pose>0 0 -0.015 -1.5708 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/trapezoid_default_as_machined__2.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='trapezoid_default_as_machined_visual_6'>
+        <pose>0 0 -0.015 -1.5708 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/trapezoid_default_as_machined__3.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='trapezoid_default_as_machined_visual_7'>
+        <pose>0.267061 0.166809 -0.087074 0.730958 -1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/motor_160kg_cm_ig52.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='trapezoid_default_as_machined_visual_8'>
+        <pose>0 0 -0.015 -1.5708 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/trapezoid_default_as_machined__4.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='trapezoid_default_as_machined_visual_9'>
+        <pose>0 0 -0.015 -1.5708 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/trapezoid_default_as_machined__5.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='trapezoid_default_as_machined_visual_10'>
+        <pose>0 0 -0.015 -1.5708 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/trapezoid_default_as_machined__6.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='trapezoid_default_as_machined_visual_11'>
+        <pose>0 0 -0.015 -1.5708 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/trapezoid_default_as_machined__7.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='trapezoid_default_as_machined_visual_12'>
+        <pose>0 0 -0.015 -1.5708 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/trapezoid_default_as_machined__8.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='trapezoid_default_as_machined_visual_13'>
+        <pose>-0.534629 -0.003965 -0.015523 1.5708 -0 -3.12945</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/trapezoid_single_eye_default_as_machined.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='trapezoid_default_as_machined_visual_14'>
+        <pose>0.267061 0.166809 -0.087074 0.730958 -1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/motor_160kg_cm_ig52__2.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='trapezoid_default_as_machined_visual_15'>
+        <pose>0 0 -0.015 -1.5708 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://rover_description/meshes/trapezoid_default_as_machined__9.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='FR_wheel' type='revolute'>
+      <pose relative_to='trapezoid_default_as_machined'>0.267061 0.166809 -0.15409 0 0 -2.41063</pose>
+      <parent>trapezoid_default_as_machined</parent>
+      <child>sheet_metal_motor_tyre_fr</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>10</effort>
+          <velocity>10</velocity>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='sheet_metal_motor_tyre_fr'>
+      <pose relative_to='FR_wheel'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0.000463 5e-06 0.026652 0 -0 0</pose>
+        <mass>5.26097</mass>
+        <inertia>
+          <ixx>0.0324874</ixx>
+          <ixy>1.7127e-08</ixy>
+          <ixz>-2.79212e-06</ixz>
+          <iyy>0.0326651</iyy>
+          <iyz>-2.11648e-06</iyz>
+          <izz>0.0517133</izz>
+        </inertia>
+      </inertial>
+      <collision name='sheet_metal_motor_tyre_fr_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.06</length>
+            <radius>0.09</radius>
+          </cylinder>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <kp>1e+07</kp>
+              <kd>1</kd>
+            </ode>
+          </contact>
+          <friction>
+            <ode>
+              <fdir1>1 0 0</fdir1>
+              <mu>1.5</mu>
+              <mu2>0.2</mu2>
+            </ode>
+             <bullet>
+    <friction>1.5</friction>
+    <friction2>0.2</friction2>
+    <fdir1>1 0 0</fdir1>
+    <rolling_friction>0.1</rolling_friction>
+  </bullet>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='sheet_metal_motor_tyre_fr_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.06</length>
+            <radius>0.09</radius>
+          </cylinder>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='MR_wheel' type='revolute'>
+      <pose relative_to='trapezoid_default_as_machined'>-0.268802 0.167162 -0.160513 0 -0 0.988601</pose>
+      <parent>trapezoid_default_as_machined</parent>
+      <child>sheet_metal_motor_tyre_fr_2</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>10</effort>
+          <velocity>10</velocity>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='sheet_metal_motor_tyre_fr_2'>
+      <pose relative_to='MR_wheel'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0.000463 5e-06 0.026652 0 -0 0</pose>
+        <mass>5.26097</mass>
+        <inertia>
+          <ixx>0.0324874</ixx>
+          <ixy>1.7127e-08</ixy>
+          <ixz>-2.79212e-06</ixz>
+          <iyy>0.0326651</iyy>
+          <iyz>-2.11648e-06</iyz>
+          <izz>0.0517133</izz>
+        </inertia>
+      </inertial>
+      <collision name='sheet_metal_motor_tyre_fr_2_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.06</length>
+            <radius>0.09</radius>
+          </cylinder>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <kp>1e+07</kp>
+              <kd>1</kd>
+            </ode>
+          </contact>
+          <friction>
+            <ode>
+              <fdir1>1 0 0</fdir1>
+              <mu>1.5</mu>
+              <mu2>0.2</mu2>
+            </ode>
+             <bullet>
+    <friction>1.5</friction>
+    <friction2>0.2</friction2>
+    <fdir1>1 0 0</fdir1>
+    <rolling_friction>0.1</rolling_friction>
+  </bullet>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='sheet_metal_motor_tyre_fr_2_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.06</length>
+            <radius>0.09</radius>
+          </cylinder>
+        </geometry>
+      </visual>
+    </link>
+    
+	 <joint name='right_trapezoid_loop_joint' type='revolute'>
+  <pose relative_to='trapezoid_single_eye_default_as_machined'>-0.44131 0.00748 0.09730 0 0 0</pose>
+  <parent>trapezoid_default_as_machined</parent>
+  <child>trapezoid_single_eye_default_as_machined</child>
+  <axis>
+    <xyz expressed_in='base_footprint'>0 1 0</xyz>
+    <limit>
+      <lower>-1e16</lower>
+      <upper>1e16</upper>
+    </limit>
+  </axis>
+</joint>
+
+<joint name='left_trapezoid_loop_joint' type='revolute'>
+  <pose relative_to='trapezoid_single_eye_default_as_machined_2'>-0.42700 -0.00160 0.09610 0 0 0</pose>
+  <parent>trapezoid_default_as_machined_2</parent>
+  <child>trapezoid_single_eye_default_as_machined_2</child>
+  <axis>
+    <xyz expressed_in='base_footprint'>0 1 0</xyz>
+    <limit>
+      <lower>-1e16</lower>
+      <upper>1e16</upper>
+    </limit>
+  </axis>
+</joint> 
+
+<!-- Intel RealSense D435i -->
+<link name='camera_link'>
+
+  <!-- Same location as old LiDAR for first test -->
+  <pose relative_to='base_footprint'>0 0 0.25 0 0 0</pose>
+
+  <inertial>
+    <mass>0.072</mass>
+    <inertia>
+      <ixx>0.0001</ixx>
+      <iyy>0.0001</iyy>
+      <izz>0.0001</izz>
+      <ixy>0</ixy>
+      <ixz>0</ixz>
+      <iyz>0</iyz>
+    </inertia>
+  </inertial>
+
+  <collision name='camera_collision'>
+    <geometry>
+      <box>
+        <size>0.025 0.09 0.025</size>
+      </box>
+    </geometry>
+  </collision>
+
+  <visual name='camera_visual'>
+    <geometry>
+      <box>
+        <size>0.025 0.09 0.025</size>
+      </box>
+    </geometry>
+  </visual>
+
+  <sensor name='d435i_depth_camera' type='depth'>
+
+    <always_on>true</always_on>
+    <visualize>true</visualize>
+    <update_rate>15</update_rate>
+
+    <camera name='d435i'>
+
+      <horizontal_fov>1.518</horizontal_fov>
+
+      <image>
+        <width>424</width>
+        <height>240</height>
+        <format>R8G8B8</format>
+      </image>
+
+      <clip>
+        <near>0.10</near>
+        <far>6.0</far>
+      </clip>
+
+      <noise>
+        <type>gaussian</type>
+        <mean>0.0</mean>
+        <stddev>0.002</stddev>
+      </noise>
+
+    </camera>
+
+    <plugin name='d435i_camera_plugin'
+            filename='libgazebo_ros_camera.so'>
+
+      <ros>
+        <namespace>/d435i</namespace>
+
+        <argument>--ros-args --remap ~/image_raw:=color/image_raw</argument>
+        <argument>--ros-args --remap ~/camera_info:=color/camera_info</argument>
+
+        <argument>--ros-args --remap ~/image_depth:=depth/image_raw</argument>
+        <argument>--ros-args --remap ~/camera_info_depth:=depth/camera_info</argument>
+
+        <argument>--ros-args --remap ~/points:=depth/points</argument>
+      </ros>
+
+      <camera_name>d435i</camera_name>
+
+      <!-- This TF is published by robot_state_publisher from rover.urdf -->
+      <frame_name>camera_optical_frame</frame_name>
+
+      <hack_baseline>0.05</hack_baseline>
+      <min_depth>0.10</min_depth>
+      <max_depth>6.0</max_depth>
+
+    </plugin>
+
+  </sensor>
+</link>
+
+<joint name='camera_joint' type='fixed'>
+  <parent>base_footprint</parent>
+  <child>camera_link</child>
+</joint>
+
+<plugin name='gazebo_ros2_control' filename='libgazebo_ros2_control.so'>
+      <parameters>__CONTROLLERS_YAML_PATH__</parameters>
+      <robot_param>robot_description</robot_param>
+      <robot_param_node>robot_state_publisher</robot_param_node>
+    </plugin>
+    
+    
+<!--<joint name='right_trapezoid_loop_joint' type='ball'>
+  <pose relative_to='trapezoid_single_eye_default_as_machined'>-0.44131 0.00748 0.09730 0 0 0</pose>
+  <parent>trapezoid_default_as_machined</parent>
+  <child>trapezoid_single_eye_default_as_machined</child>
+</joint>
+
+<joint name='left_trapezoid_loop_joint' type='ball'>
+  <pose relative_to='trapezoid_single_eye_default_as_machined_2'>-0.42700 -0.00160 0.09610 0 0 0</pose>
+  <parent>trapezoid_default_as_machined_2</parent>
+  <child>trapezoid_single_eye_default_as_machined_2</child>
+</joint>-->
+
+
+  
+    <!-- SIMULATION-ONLY planar drive.
+         Used because the detailed 6-wheel contact model resists skid yaw.
+         Existing wheel odometry remains the odometry source. -->
+    <plugin name='rover_planar_move'
+            filename='libgazebo_ros_planar_move.so'>
+
+      <ros>
+        <remapping>cmd_vel:=/sim_cmd_vel</remapping>
+      </ros>
+
+      <update_rate>100</update_rate>
+
+      <publish_odom>false</publish_odom>
+      <publish_odom_tf>false</publish_odom_tf>
+
+      <odometry_frame>odom</odometry_frame>
+      <robot_base_frame>base_footprint</robot_base_frame>
+
+    </plugin>
+
+</model>
+</sdf>
